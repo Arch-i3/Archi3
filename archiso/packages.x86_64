@@ -260,6 +260,7 @@ pipewire-pulse
 
 ##### sddm display manager
 sddm
+sddm-theme-greenleaf
 
 ##### want to have base-devel group
 
