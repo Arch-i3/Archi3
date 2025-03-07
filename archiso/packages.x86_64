@@ -142,7 +142,7 @@ zsh
 #alci-dwm-nemesis
 alci-calamares
 #alci-calamares-dev
-#alci-calamares-config
+alci-calamares-config
 #alci-calamares-config-btrfs
 #alci-calamares-config-dev
 #alci-calamares-config-hardened
@@ -218,8 +218,11 @@ qemu-guest-agent
 open-vm-tools
 xf86-input-vmmouse
 xf86-video-vmware
+
 ## Splash Screen
 plymouth
+plymouth-theme-archi3
+
 dracut
 #wayland
 
@@ -343,7 +346,6 @@ polkit-gnome
 ##Application from local repo
 # archlinux-themes-sddm
 # grub2-theme-archlinux
-plymouth-theme-archi3
 paper-icon-theme
 # sddm-theme-greenleaf
 #calamares-git
