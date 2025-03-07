@@ -8,7 +8,7 @@ bcachefs-tools
 bind
 bolt
 brltty
-broadcom-wl
+broadcom-wl-dkms
 btrfs-progs
 clonezilla
 cloud-init
@@ -138,11 +138,11 @@ zsh
 ###             VIA CALAMARES CONFIG                ###
 #######################################################
 
-alci-dwm
+#alci-dwm
 #alci-dwm-nemesis
-alci-calamares
+#alci-calamares
 #alci-calamares-dev
-alci-calamares-config
+#alci-calamares-config
 #alci-calamares-config-btrfs
 #alci-calamares-config-dev
 #alci-calamares-config-hardened
@@ -150,7 +150,8 @@ alci-calamares-config
 #alci-calamares-config-pure
 #alci-calamares-config-xanmod
 #alci-calamares-config-zen
-xterm
+#xterm
+#gparted
 
 #######################################################
 ###      PACKAGES THAT STAY AFTER INSTALLATION      ###
@@ -168,19 +169,74 @@ xorg-xrdb
 mkinitcpio-openswap
 
 ##### you can also use nmtui from the terminal
-#networkmanager
-#network-manager-applet
+networkmanager
+network-manager-applet
+
+##Network
+networkmanager-openconnect
+networkmanager-openvpn
+networkmanager-pptp
+networkmanager-strongswan
+networkmanager-vpnc
+network-manager-sstp
+nm-connection-editor
+ufw
+#gufw
 
 #######################################################
 ###                    EXTRAS                       ###
 #######################################################
 
-##### xorg applications
+##### CPU drivers
+#amd-ucode 
+intel-ucode
 
-#xorg-server
-#xorg-apps
-#neofetch
+##### Xorg
+xorg
+xorg-drivers
+xorg-fonts
 
+## GPU Drivers (Intel/AMD/VM) ------------------------------
+xf86-video-fbdev
+xf86-video-vesa
+xf86-video-intel
+xf86-video-amdgpu
+xf86-video-ati
+mesa
+mesa-utils
+
+
+## GPU Drivers (Nvidia) ------------------------------
+#xf86-video-nouveau
+#nvidia
+#nvidia-utils
+#nvidia-settings
+
+## Hypervisors ------------------------------
+virtualbox-guest-utils
+qemu-guest-agent
+open-vm-tools
+xf86-input-vmmouse
+xf86-video-vmware
+## Splash Screen
+plymouth
+dracut
+#wayland
+
+## Touchpad and Mouse ------------------------------
+xorg-xinput
+xf86-input-libinput
+
+## Fonts
+noto-fonts
+noto-fonts-emoji
+noto-fonts-cjk
+terminus-font
+
+## Audio
+pipewire
+pipewire-alsa
+pipewire-pulse
 
 ##### Drivers for graphical cards
 
@@ -199,22 +255,8 @@ mkinitcpio-openswap
 #nvidia-utils
 
 
-
-##### lightdm display manager
-
-#lightdm
-#lightdm-gtk-greeter
-
 ##### sddm display manager
-
-#sddm
-#alci-sddm-plasma-archpaint
-
-##### gdm display manager
-
-#gdm
-
-
+sddm
 
 ##### want to have base-devel group
 
@@ -224,31 +266,70 @@ mkinitcpio-openswap
 
 #linux-headers
 
+## Display Manager ------------------------------
+i3
 
+# Wallpapers
+feh
 
-##### want to have a desktop
+# Theme
+materia-gtk-theme
+materia-kde
 
-#test
-#xfce4
-#xfce4-goodies
-#neofetch
+# Notification
+dunst
 
+###Applications
+iw
+calc
+
+# File manager
+pcmanfm
+
+# Browser
+firefox
+
+# Text editor
+geany
+
+# Randr
+lxrandr
+
+# Task manager
+lxtask
+
+# Picture viewer
+viewnior
+
+# Terminal emulator
+alacritty
+
+# Media player
+mpv
+
+# Dynamic menu
+dmenu
+
+# Bluetooth managrt
+blueman
+
+# Torrent client
+transmission-gtk
+
+# GUI Packege Manager
+pamac-aur
+libpamac-aur
+picom
+
+# olkit
+polkit-gnome
 
 ##### want to add/use the ArcoLinux repos
-
-#arcolinux-mirrorlist-git
-#arcolinux-keyring
-
-#test
-#arcolinux-wallpapers-git
 
 ##### want to add/use the Chaotic repo
 
 #chaotic-mirrorlist
 #chaotic-keyring
-
-#test
-#colloid-cursors-git
 
 
 ##### want to add/use your local repo packages
@@ -259,17 +340,75 @@ mkinitcpio-openswap
 #Change the name erik to your own username
 #update the database
 
-#test
-#nemesis-wallpapers
+##Application from local repo
+# archlinux-themes-sddm
+# grub2-theme-archlinux
+plymouth-theme-archi3
+paper-icon-theme
+# sddm-theme-greenleaf
+calamares-git
+boost
 
+
+
+## packages required by local/repo 
+#paper icon theme required
+meson
+# calamares required
+kcrash
 
 #### want have a btrfs format
 #### use alci-calamares-config-btrfs 
 
-#timeshift
+# timeshift
 #grub-btrfs
 #timeshift-autosnap
 git
 
-#grub theme
-alci-grub-theme-git
+## Build packages
+fakeroot
+boost
+extra-cmake-modules
+ninja
+qt6-tools
+
+## Archives
+bzip2
+gzip
+lrzip
+lz4
+lzip
+lzop
+xz
+zstd
+p7zip
+zip
+unzip
+unrar
+unarchiver
+xarchiver
+
+
+## Files
+gvfs
+gvfs-mtp
+gvfs-afc
+gvfs-gphoto2
+gvfs-smb
+gvfs-google
+highlight
+trash-cli
+ueberzug
+xdg-user-dirs
+xdg-user-dirs-gtk
+
+# Print
+system-config-printer
+gsfonts
+
+boost-libs
+
+## MAC
+apparmor
+
+
