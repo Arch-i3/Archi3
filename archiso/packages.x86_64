@@ -152,6 +152,8 @@ alci-calamares-config
 #alci-calamares-config-zen
 #xterm
 #gparted
+mkinitcpio-openswap
+ckbcomp
 
 #######################################################
 ###      PACKAGES THAT STAY AFTER INSTALLATION      ###
