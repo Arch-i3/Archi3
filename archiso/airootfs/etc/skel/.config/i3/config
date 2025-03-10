@@ -199,7 +199,7 @@ bindsym $mod+r mode "resize"
 #
 
 # Display Wallpaper
-exec_always feh --bg-scale /usr/share/backgrounds/archlinux/Black_Rhino.jpg
+exec_always feh --bg-scale /usr/share/backgrounds/archlinux/reflected.jpg
 
 # start a terminal
 bindsym $mod+Return exec alacritty
