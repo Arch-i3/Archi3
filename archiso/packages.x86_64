@@ -194,6 +194,9 @@ ufw
 #amd-ucode 
 intel-ucode
 
+# Boot
+grub-theme-archi3
+
 ##### Xorg
 xorg
 xorg-drivers
