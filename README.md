@@ -55,13 +55,12 @@ Each release bears the name of an endangered species.
 
 Keys to use with $mod (Alt):
 
-![keyboard-layer1](https://github.com/user-attachments/assets/ee164d51-dd8d-4507-9921-f40da5c74f03)
-
+<img src=https://i3wm.org/docs/keyboard-layer1.png />
 Keys to use with Shift+$mod:
 
-![keyboard-layer2](https://github.com/user-attachments/assets/6289b9bf-adc7-488a-b13a-ee235f562138)
-
+<img src=https://i3wm.org/docs/keyboard-layer2.png />
 #
+
 > [!TIP]
 > Archi3 hotkeys for applications
 > | Hotkey  | Application |
