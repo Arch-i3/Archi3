@@ -161,7 +161,6 @@ kcrash
 ###      PACKAGES THAT STAY AFTER INSTALLATION      ###
 #######################################################
 
-sddm
 bash-completion
 os-prober
 dex
