@@ -332,7 +332,7 @@ libpamac-aur
 picom
 
 # olkit
-polkit-gn
+polkit-gnome
 
 ##Application from local repo
 paper-icon-theme
