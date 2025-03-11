@@ -46,7 +46,6 @@ Use the smallest and thinnest application possible.
 Thanks to our way of life, several animal species are threatened with extinction. I would like to pay tribute to these animals with the names of the versions. and alert people to the dangers.
 
 Each release bears the name of an endangered species.
-The background images for the editions are taken from the [WWF](https://www.worldwildlife.org/species/directory?direction=desc&sort=extinction_status) pages.
 
 > [!IMPORTANT]
 > WWF® and ©1986 Panda Symbol are owned by WWF. All rights reserved.
