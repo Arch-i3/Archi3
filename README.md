@@ -36,8 +36,7 @@ Use the smallest and thinnest application possible.
 
 #
 ## Screenshots
-![Screenshot_Archi3_2025-02-14_10:02:36](https://github.com/user-attachments/assets/85ad80f6-e4ec-4dfc-8f63-da814362a575)
-
+<img src=https://github.com/Arch-i3/Archi3-Artwork/blob/main/screenshots/Archi3.png />
 #
 ## Code names
 
