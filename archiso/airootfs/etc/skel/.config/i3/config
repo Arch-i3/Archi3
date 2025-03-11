@@ -220,7 +220,16 @@ bindsym $mod+shift+m exec lxrandr
 bindsym $mod1+shift+p exec --no-startup-id pamac-manager
 
 # Task manager
-bindsym $mod1+p exec --no-startup-id lxtast
+bindsym $mod+t  exec lxtask
+
+# Power manager
+bindsym $mod+p exec mate-power-preferences
+
+# Network Maanger
+bindsym $mod+n exec nm-connection-editor
+
+# Network Maanger
+bindsym $mod+b exec blueman-manager
 
 bar {
         status_command i3status
