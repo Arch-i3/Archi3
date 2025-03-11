@@ -75,7 +75,9 @@ Keys to use with Shift+$mod:
 > | $mod+Return  | Terminal Emulator  |
 > | $mod+shift+m  | Monitor settings  |
 > | $mod+shift+p  | Package manager  |
-> | $mod+p  | Task manager  |
+> | $mod+p  | Power manager  |
+> | $mod+n  | Network manager  |
+> | $mod+b  | Bluetooth manager  |
 
 
 > [!NOTE]
