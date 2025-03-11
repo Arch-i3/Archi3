@@ -316,6 +316,10 @@ alacritty
 
 # Media player
 mpv
+gst-libav
+gst-plugins-good
+gst-plugins-ugly
+gst-plugins-bad
 
 # Dynamic menu
 dmenu
