@@ -154,6 +154,8 @@ alci-calamares-config
 #gparted
 mkinitcpio-openswap
 ckbcomp
+kcrash
+
 
 #######################################################
 ###      PACKAGES THAT STAY AFTER INSTALLATION      ###
@@ -262,7 +264,7 @@ pipewire-pulse
 
 ##### sddm display manager
 sddm
-sddm-theme-greenleaf
+sddm-theme-archi3
 
 ##### want to have base-devel group
 
@@ -331,21 +333,9 @@ picom
 polkit-gn
 
 ##Application from local repo
-# archlinux-themes-sddm
-# grub2-theme-archlinux
 paper-icon-theme
-# sddm-theme-greenleaf
-#calamares-git
-boost
-
-## packages required by local/repo 
-#paper icon theme required
 meson
-# calamares required
-kcrash
-
-#### want have a btrfs format
-#### use alci-calamares-config-btrfs 
+boost
 
 # timeshift
 #grub-btrfs
