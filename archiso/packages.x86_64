@@ -328,23 +328,7 @@ libpamac-aur
 picom
 
 # olkit
-polkit-gnome
-
-##### want to add/use the ArcoLinux repos
-
-##### want to add/use the Chaotic repo
-
-#chaotic-mirrorlist
-#chaotic-keyring
-
-
-##### want to add/use your local repo packages
-##### create your packages and put them in the local repo
-
-#There is a copy of the local repo in your folder
-#Copy/paste it to your homefolder
-#Change the name erik to your own username
-#update the database
+polkit-gn
 
 ##Application from local repo
 # archlinux-themes-sddm
@@ -353,8 +337,6 @@ paper-icon-theme
 # sddm-theme-greenleaf
 #calamares-git
 boost
-
-
 
 ## packages required by local/repo 
 #paper icon theme required
@@ -393,7 +375,6 @@ unrar
 unarchiver
 xarchiver
 
-
 ## Files
 gvfs
 gvfs-mtp
@@ -416,4 +397,6 @@ boost-libs
 ## MAC
 apparmor
 
+# Power
+mate-power-manager
 
