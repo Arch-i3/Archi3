@@ -41,7 +41,7 @@ Use the smallest and thinnest application possible.
 #
 ## Code names
 
-<img align="left" width="100" src="https://github.com/sandorkakuk/Archi3/blob/master/WWF_Logo_Small_RGB_72dpi.jpg">
+<img align="left" width="100" src="[https://github.com/sandorkakuk/Archi3/blob/master/WWF_Logo_Small_RGB_72dpi.jpg](https://www.pentagram.com/news/angus-hyland-writes-about-the-wwf-logo-for-computer-arts#29478)">
 
 Thanks to our way of life, several animal species are threatened with extinction. I would like to pay tribute to these animals with the names of the versions. and alert people to the dangers.
 
