@@ -87,3 +87,6 @@ Keys to use with Shift+$mod:
 
 Thanks to all Linux and open source developers, because without them this project would not have been possible.
 Special thanks to the [Archcraft](https://github.com/archcraft-os), [Arcolinux](https://github.com/arcolinux) and [EndeavourOS](https://github.com/endeavouros-team) projects, from which I drew ideas.
+
+## Creating a USB
+You can choose from the [following](https://wiki.archlinux.org/title/USB_flash_installation_medium) methods.
