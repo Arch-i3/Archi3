@@ -1,6 +1,5 @@
 
-![Archi3-logo-dark](https://github.com/user-attachments/assets/e92ad8bd-20f0-4322-8539-53c946ded59a)
-#
+<img height=50 src=https://github.com/Arch-i3/Archi3-Artwork/blob/main/images/Archi3-logo-dark-small.png />#
 
 Yet another linux distribution, based on Arch Linux and i3.
 #
