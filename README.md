@@ -39,6 +39,7 @@ Use the smallest and thinnest application possible.
 #
 ## Screenshots
 <img src=https://github.com/Arch-i3/Archi3-Artwork/blob/main/screenshots/Archi3.png />
+
 #
 ## Code names
 
@@ -61,8 +62,8 @@ Keys to use with $mod (Alt):
 Keys to use with Shift+$mod:
 
 <img src=https://i3wm.org/docs/keyboard-layer2.png />
-#
 
+#
 > [!TIP]
 > Archi3 hotkeys for applications
 > | Hotkey  | Application |
@@ -88,5 +89,6 @@ Keys to use with Shift+$mod:
 Thanks to all Linux and open source developers, because without them this project would not have been possible.
 Special thanks to the [Archcraft](https://github.com/archcraft-os), [Arcolinux](https://github.com/arcolinux) and [EndeavourOS](https://github.com/endeavouros-team) projects, from which I drew ideas.
 
+#
 ## Creating a USB
 You can choose from the [following](https://wiki.archlinux.org/title/USB_flash_installation_medium) methods.
