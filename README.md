@@ -1,5 +1,5 @@
 
-<img height=50 src=https://github.com/Arch-i3/Archi3-Artwork/blob/main/images/Archi3-logo-dark-small.png />#
+<img height=50 src=https://github.com/Arch-i3/Archi3-Artwork/blob/main/images/Archi3-logo-dark-small.png />
 
 Yet another linux distribution, based on Arch Linux and i3.
 #
