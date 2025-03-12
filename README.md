@@ -89,5 +89,10 @@ Thanks to all Linux and open source developers, because without them this projec
 Special thanks to the [Archcraft](https://github.com/archcraft-os), [Arcolinux](https://github.com/arcolinux) and [EndeavourOS](https://github.com/endeavouros-team) projects, from which I drew ideas.
 
 #
+## Download
+
+The iso can be downloaded [here](https://www.mediafire.com/file/9rjniezkg01rc8c/Archi3-2025.03.11-x86_64.iso/file)
+
+#
 ## Creating a USB
 You can choose from the [following](https://wiki.archlinux.org/title/USB_flash_installation_medium) methods.
