@@ -25,7 +25,7 @@ Use the smallest and thinnest application possible.
 > | File Manager | PCManFM | Midnight Commander |
 > | Text editor| Geany | nano |
 > | Monitor Settings| lxrandr | xrandr |
-> | Package Manager | PAmac | pacman |
+> | Package Manager | Pamac | pacman |
 > | Task Manager | lxtask | htop |
 
 - [Blueman](https://github.com/blueman-project/blueman) is a GTK+ Bluetooth Manager
