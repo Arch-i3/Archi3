@@ -96,3 +96,10 @@ The iso can be downloaded [here](https://www.mediafire.com/file/9rjniezkg01rc8c/
 #
 ## Creating a USB
 You can choose from the [following](https://wiki.archlinux.org/title/USB_flash_installation_medium) methods.
+
+For example, in Linux with dd:
+```
+sudo dd bs=4M if=path/to/archlinux-version-x86_64.iso of=/dev/disk/by-id/usb-My_flash_drive conv=fsync oflag=direct status=progress
+```
+
+
