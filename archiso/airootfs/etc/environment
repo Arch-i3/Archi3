@@ -10,5 +10,11 @@ TERMINAL=alacritty
 VISUAL=geany
 #PATH="/usr/share/archcraft/scripts"
 
+#QT_QPA_PLATFORMTHEME=gtk2
+#QT_QPA_PLATFORMTHEME=gtk3
+QT_QPA_PLATFORMTHEME=qt5ct
+#QT_STYLE_OVERRIDE=Materia
+
+
 # uncomment only if cursor is not visible in wayland sessions
 #WLR_NO_HARDWARE_CURSORS=1
