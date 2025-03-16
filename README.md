@@ -35,9 +35,11 @@ Use the smallest and thinnest application possible.
 - Material Design ([Materia](https://github.com/nana-4/materia-theme) theme, [Paper](https://snwh.org/paper) icon theme)
 - Low CPU usage + Low memory usage + Energy saving = Lower ecological footprint
 
-#
-## Screenshots
-<img src=https://github.com/Arch-i3/Archi3-Artwork/blob/main/screenshots/Archi3.png />
+For example:
+  |          | Windows10 Home x64 | ChromeOS Flex | Archi3 |
+  |-----------|--------|---------------|---------|
+  |Samsung NP370 | 1,7GB | 900 MB | 350 MB |
+  
 
 #
 ## Code names
