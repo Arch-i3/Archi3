@@ -397,5 +397,5 @@ boost-libs
 apparmor
 
 # Power
-mate-power-manager
-
+#mate-power-manager
+xfce4-power-manager
