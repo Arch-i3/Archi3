@@ -265,7 +265,7 @@ pipewire-pulse
 
 ##### sddm display manager
 sddm
-sddm-theme-archi3
+#sddm-theme-archi3
 
 ##### want to have base-devel group
 
