@@ -80,6 +80,7 @@ Keys to use with Shift+$mod:
 > | $mod+p  | Power manager  |
 > | $mod+n  | Network manager  |
 > | $mod+b  | Bluetooth manager  |
+> | $mod+x  | Lock screen  |
 
 
 > [!NOTE]
