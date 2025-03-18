@@ -284,10 +284,12 @@ feh
 # Theme
 materia-gtk-theme
 materia-kde
+kvantum
+kvantum-qt5
 kvantum-theme-materia
 qt5ct
 qt6ct
-kvantum-qt5
+
 
 # Notification
 dunst
