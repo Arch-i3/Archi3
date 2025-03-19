@@ -222,8 +222,7 @@ bindsym $mod1+shift+p exec --no-startup-id pamac-manager
 # Task manager
 bindsym $mod+t  exec lxtask
 
-# Power manager
-#bindsym $mod+p exec xfce4-power-manager-settings
+## Power manager
 exec --no-startup-id xfce4-power-manager
 
 # Network Maanger
