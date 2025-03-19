@@ -373,6 +373,9 @@ xdg-user-dirs-gtk
 system-config-printer
 gsfonts
 
+# Simple scanning utility
+simple-scan
+
 boost-libs
 
 ## MAC
