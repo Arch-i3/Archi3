@@ -228,9 +228,6 @@ open-vm-tools
 xf86-input-vmmouse
 xf86-video-vmware
 
-dracut
-#wayland
-
 ## Touchpad and Mouse ------------------------------
 xorg-xinput
 xf86-input-libinput
@@ -378,11 +375,12 @@ gsfonts
 # Simple scanning utility
 simple-scan
 
-boost-libs
-
-## MAC
-apparmor
-
 ### Power
 # mate-power-manager
 xfce4-power-manager
+
+boost-libs
+dracut
+#wayland
+## MAC
+apparmor
