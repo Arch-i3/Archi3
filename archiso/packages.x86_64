@@ -270,7 +270,7 @@ kvantum-qt5
 kvantum-theme-materia
 qt5ct
 qt6ct
-gtk3-nocsd-git
+#gtk3-nocsd-git
 
 
 # Notification
