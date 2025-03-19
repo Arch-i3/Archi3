@@ -171,11 +171,9 @@ xterm
 xorg-xrdb
 mkinitcpio-openswap
 
-##### you can also use nmtui from the terminal
+## Network
 networkmanager
 network-manager-applet
-
-##Network
 networkmanager-openconnect
 networkmanager-openvpn
 networkmanager-pptp
@@ -186,16 +184,16 @@ nm-connection-editor
 ufw
 #gufw
 
-#######################################################
-###                    EXTRAS                       ###
-#######################################################
-
 ##### CPU drivers
 #amd-ucode 
 intel-ucode
 
 # Boot
 grub-theme-archi3
+
+## Splash Screen
+plymouth
+plymouth-theme-archi3
 
 ##### Xorg
 xorg
@@ -208,15 +206,20 @@ xf86-video-vesa
 xf86-video-intel
 xf86-video-amdgpu
 xf86-video-ati
+#xf86-video-nouveau
 mesa
 mesa-utils
 
+#driver for virtualbox - xf86-video-vmware is dependency
+#systemctl enable vboxservice
+#systemctl start vboxservice
+#to have fullscreen
 
 ## GPU Drivers (Nvidia) ------------------------------
 #xf86-video-nouveau
 #nvidia
 #nvidia-utils
-#nvidia-settings
+#nvidia-setting
 
 ## Hypervisors ------------------------------
 virtualbox-guest-utils
@@ -224,10 +227,6 @@ qemu-guest-agent
 open-vm-tools
 xf86-input-vmmouse
 xf86-video-vmware
-
-## Splash Screen
-plymouth
-plymouth-theme-archi3
 
 dracut
 #wayland
@@ -247,32 +246,14 @@ pipewire
 pipewire-alsa
 pipewire-pulse
 
-##### Drivers for graphical cards
-
-#driver for virtualbox - xf86-video-vmware is dependency
-#systemctl enable vboxservice
-#systemctl start vboxservice
-#to have fullscreen
-
-#xf86-video-intel
-#xf86-video-amdgpu
-#xf86-video-nouveau
-
-#nvidia
-#nvidia-settings
-#nvidia-utils
-
-
 ##### sddm display manager
 sddm
 #sddm-theme-archi3
 
 ##### want to have base-devel group
-
 #base-devel
 
 ##### want to have linux-headers
-
 #linux-headers
 
 ## Display Manager ------------------------------
@@ -290,11 +271,10 @@ kvantum-theme-materia
 qt5ct
 qt6ct
 
-
 # Notification
 dunst
 
-###Applications
+### Applications
 iw
 calc
 
@@ -340,7 +320,7 @@ pamac-aur
 libpamac-aur
 picom
 
-# olkit
+# Polkit
 polkit-gnome
 
 ##Application from local repo
@@ -398,6 +378,6 @@ boost-libs
 ## MAC
 apparmor
 
-# Power
-mate-power-manager
-# xfce4-power-manager
+### Power
+# mate-power-manager
+xfce4-power-manager
