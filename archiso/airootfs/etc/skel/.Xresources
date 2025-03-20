@@ -37,5 +37,8 @@ Xft.autohint:  false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 Xft.rgba:      rgb
+# From eneavouros-i3wm-setup/etc/skel/Xresources
+Xcursor.theme: Qogir-dark
+Xcursor.size: 16
 
 
