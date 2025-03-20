@@ -268,6 +268,8 @@ kvantum-theme-materia
 qt5ct
 qt6ct
 #gtk3-nocsd-git
+papirus-icon-theme
+papirus-folders
 
 
 # Notification
@@ -323,7 +325,7 @@ picom
 polkit-gnome
 
 ##Application from local repo
-paper-icon-theme
+#paper-icon-theme
 meson
 boost
 
