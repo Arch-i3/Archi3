@@ -237,6 +237,19 @@ noto-fonts
 noto-fonts-emoji
 noto-fonts-cjk
 terminus-font
+ttf-roboto
+
+# Theme
+materia-gtk-theme
+materia-kde
+kvantum
+kvantum-qt5
+kvantum-theme-materia
+qt5ct
+qt6ct
+#gtk3-nocsd-git
+papirus-icon-theme
+papirus-folders
 
 ## Audio
 pipewire
@@ -259,17 +272,7 @@ i3
 # Wallpapers
 feh
 
-# Theme
-materia-gtk-theme
-materia-kde
-kvantum
-kvantum-qt5
-kvantum-theme-materia
-qt5ct
-qt6ct
-#gtk3-nocsd-git
-papirus-icon-theme
-papirus-folders
+
 
 
 # Notification
