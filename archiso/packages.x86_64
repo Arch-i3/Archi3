@@ -231,10 +231,10 @@ xorg-xinput
 xf86-input-libinput
 
 ## Fonts
-noto-fonts
-noto-fonts-emoji
-noto-fonts-cjk
-terminus-font
+#noto-fonts
+#noto-fonts-emoji
+#noto-fonts-cjk
+#terminus-font
 ttf-roboto
 
 # Theme
