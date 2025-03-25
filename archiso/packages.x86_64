@@ -340,6 +340,7 @@ boost
 extra-cmake-modules
 ninja
 qt6-tools
+debugedit
 
 ## Archives
 bzip2
