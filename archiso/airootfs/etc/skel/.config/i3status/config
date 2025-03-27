@@ -1,17 +1,6 @@
 ### Configuration file for i3status
 ## http://i3wm.org/i3status/
 
-
-#general {
-#        output_format = "i3bar"
-#        colors = true
-#		color_good = "#98c379"
-#		color_degraded = "#e5c07b"
-#		color_bad = "#e06c75"
-#		color_separator = "#292e39"
-#        interval = 5
-#}
-
 general {
 	output_format = "i3bar"
 	interval = 5
@@ -23,8 +12,6 @@ general {
 	color_bad = "#e06c75"
 	color_separator = "#292e39"
 }
-
-
 
 # order += "ipv6"
 order += "disk /"
@@ -43,20 +30,9 @@ order += "tztime berlin"
 order += "volume master"
 
 
-#wireless wlan0 {
-#        format_up = "W: (%quality at %essid, %bitrate) %ip"
-#        format_down = "W: down"
-#}
-
-## Module :: wireless 
 wireless wlan0 {
-	# %quality | %essid | %bitrate | %frequency | %ip
-	format_up = "  %essid"
-	format_down = "  Disconnected"
-	format_bitrate = "%g %cb/s"
-	format_noise = "%03d%s"
-	format_quality = "%03d%s"
-	format_signal = "%03d%s"
+        format_up = "W: %essid"
+        format_down = "W: down"
 }
 
 ethernet eth0 {
@@ -67,10 +43,10 @@ ethernet eth0 {
 #battery 0 {
 #        format = "%status %percentage %remaining %emptytime"
 #        format_down = "No battery"
-#        status_chr = ""
+#        status_chr = "CHR"
 #		status_bat = " "
-#		status_unk = " "
-#		status_full = " "
+#		status_unk = "UNK "
+#		status_full = "FULL "
 #        status_idle = "☻ IDLE"
 #        path = "/sys/class/power_supply/BAT%d/uevent"
 #        low_threshold = 10
@@ -87,10 +63,10 @@ battery 0 {
 	hide_seconds = true
 	low_threshold = 20
 	threshold_type = percentage
-	status_chr = ""
+	status_chr = "CHR"
 	status_bat = " "
-	status_unk = " "
-	status_full = " "
+	status_unk = "UNK "
+	status_full = "FULL "
 }
 
 
@@ -120,23 +96,23 @@ tztime local {
 
 ## Module :: tztime 
 tztime berlin {
-	format = "  %I:%M %p"
+	format = "%I:%M %p"
 	timezone = "Asia/Kolkata"
 	locale = "en_US.UTF-8"
 	hide_if_equals_localtime = false
 }
 
-load {
-        format = "%5min"
-}
+#load {
+#        format = "%5min"
+#}
 
 ## Module :: cpu_usage 
 cpu_usage {
-	format = "  %usage"
+	format = "CPU: %usage"
 	degraded_threshold = 25
-	format_above_degraded_threshold = "  %usage"
+	format_above_degraded_threshold = "CPU  %usage"
 	max_threshold = 75
-	format_above_threshold = "  Warning: %usage"
+	format_above_threshold = "CPU: Warning: %usage"
 }
 
 #cpu_temperature 0 {
@@ -161,12 +137,12 @@ cpu_temperature 0 {
 ## Module :: memory 
 memory {
 	# %total | %free | %used | %available | %shared
-	format = "  %used"
+	format = "RAM: %used"
 	unit = auto
 	decimals = 1
 	threshold_degraded = 1G
 	threshold_critical = 1G
-	format_degraded = "  Low Memory: %free"
+	format_degraded ="RAM: Low Memory: %free"
 }
 
 #disk "/" {
@@ -176,22 +152,22 @@ memory {
 # Module :: disk
 disk / {
 	# %free | %avail | %total | %percentage_used/free/avail
-	format = "  %free"
-	format_not_mounted = "  Not Mounted"
+	format = "DISK: %free"
+	format_not_mounted = "DISK: Not Mounted"
 	prefix_type = custom
 	low_threshold = 2
-	format_below_threshold = "  Warning: %free Free Space"
+	format_below_threshold = "DISK: Warning: %free Free Space"
 	threshold_type = gbytes_free
 }
 
 
-read_file uptime {
-        path = "/proc/uptime"
-}
+#read_file uptime {
+#        path = "/proc/uptime"
+#}
 
 ## Module :: volume 
 volume master {
 	device = "pulse"
-	format = "  %volume"
-	format_muted = " Muted"
+	format = "VOL:  %volume"
+	format_muted = "VOL: Muted"
 }
