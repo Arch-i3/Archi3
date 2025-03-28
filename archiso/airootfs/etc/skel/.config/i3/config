@@ -233,6 +233,10 @@ exec_always --no-startup-id numlockx on
 # Authentication dialog
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
+# Audio
+exec_always --no-startup-id volumeicon
+
+
 bar {
         status_command i3status
         # disable clicking on workspace buttons
