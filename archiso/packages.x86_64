@@ -322,6 +322,8 @@ libpamac-aur
 picom
 vala
 gobject-introspection
+asciidoc
+itstool
 
 # Polkit
 polkit-gnome
