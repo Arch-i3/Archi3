@@ -6,11 +6,6 @@
 # ß
 # If the above line is not correctly displayed, fix your editor first!
 
-#general {
-#        colors = true
-#        interval = 5
-#}
-
 general {
 	output_format = "i3bar"
 	interval = 5
@@ -31,7 +26,7 @@ order += "cpu_usage"
 order += "cpu_temperature 0"
 order += "memory"
 order += "disk /"
-order += "load"
+# order += "load"
 order += "volume master"
 order += "tztime local"
 
@@ -55,10 +50,11 @@ battery all {
 	hide_seconds = true
 	low_threshold = 20
 	threshold_type = percentage
-	status_chr = "CHR"
+	status_chr = "BAT: CHR"
 #	status_bat = ""
 	status_unk = "BAT: UNK "
-	status_full = "BAT: FULL "
+	status_full = "BAT: FULL"
+	status_idle = "BAT: IDLE"
 }
 
 ## Module :: cpu_usage 
