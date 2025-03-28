@@ -252,6 +252,8 @@ papirus-folders
 pipewire
 pipewire-alsa
 pipewire-pulse
+volumeicon
+pasystray
 
 ##### sddm display manager
 sddm
