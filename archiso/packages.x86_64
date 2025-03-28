@@ -320,6 +320,8 @@ transmission-gtk
 pamac-aur
 libpamac-aur
 picom
+vala
+gobject-introspection
 
 # Polkit
 polkit-gnome
