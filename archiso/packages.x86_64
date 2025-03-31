@@ -283,6 +283,7 @@ calc
 
 # File manager
 pcmanfm
+webp-pixbuf-loader 
 
 # Browser
 firefox
