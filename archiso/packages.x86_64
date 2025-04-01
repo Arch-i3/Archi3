@@ -386,8 +386,8 @@ gsfonts
 simple-scan
 
 ### Power
-# mate-power-manager
-xfce4-power-manager
+mate-power-manager
+#xfce4-power-manager
 
 boost-libs
 dracut
