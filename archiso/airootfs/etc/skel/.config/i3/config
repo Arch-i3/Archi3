@@ -216,7 +216,9 @@ bindsym $mod+shift+p exec --no-startup-id pamac-manager
 bindsym $mod+t  exec lxtask
 
 # Power manager
-bindsym $mod+p exec --no-startup-id xfce4-power-manager-settings
+exec --no-startup-id mate-power-manager 
+exec xautolock -time 30 -locker '&& i3lock -p' -notify 30 -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'"
+bindsym $mod+p exec --no-startup-id mate-power-preferences
 
 # Network Maanger
 bindsym $mod+n exec nm-connection-editor
@@ -234,8 +236,8 @@ exec_always --no-startup-id numlockx on
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # Audio
-exec_always --no-startup-id volumeicon
-
+#exec_always --no-startup-id pasystray
+exec --no-startup-id pasystray
 
 bar {
         status_command i3status
@@ -255,7 +257,7 @@ bar {
 		font pango:Roboto  10
 
 		# Custom separator symbol
-		separator_symbol ":|:"
+		separator_symbol "|"
 		
 		# Workspace buttons
 		workspace_buttons yes
