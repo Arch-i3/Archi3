@@ -390,6 +390,7 @@ simple-scan
 
 ### Power
 mate-power-manager
+mate-desktop
 #xfce4-power-manager
 
 boost-libs
