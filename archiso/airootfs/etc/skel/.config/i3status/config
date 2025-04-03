@@ -8,7 +8,7 @@
 
 general {
 	output_format = "i3bar"
-	interval = 5
+	interval = 1
 	markup = "pango"
 	separator = " "
 	colors = true
@@ -43,27 +43,27 @@ ethernet _first_ {
 battery all {
 	# %percentage | %status | %remaining | %emptytime | %consumption
 	format = "%status %percentage (%remaining)"
-	format_down = "BAT: No Battery"
+	format_down = "B: No Battery"
 	format_percentage = "%.00f%s"
 	integer_battery_capacity = true
 	last_full_capacity = true
 	hide_seconds = true
 	low_threshold = 20
 	threshold_type = percentage
-	status_chr = "BAT: CHR"
+	status_chr = "B: CHR"
 #	status_bat = ""
-	status_unk = "BAT: UNK "
-	status_full = "BAT: FULL"
-	status_idle = "BAT: IDLE"
+	status_unk = "B: UNK "
+	status_full = "B: FULL"
+	status_idle = "B: IDLE"
 }
 
 ## Module :: cpu_usage 
 cpu_usage {
-	format = "CPU: %usage"
+	format = "P: %usage"
 	degraded_threshold = 25
-	format_above_degraded_threshold = "CPU: %usage"
+	format_above_degraded_threshold = "P: %usage"
 	max_threshold = 75
-	format_above_threshold = "CPU: Warning: %usage"
+	format_above_threshold = "P: Warning: %usage"
 }
 
 ## Module :: cpu_temperature 
@@ -76,11 +76,11 @@ cpu_temperature 0 {
 
 disk "/" {
 	# %free | %avail | %total | %percentage_used/free/avail
-	format = "DISK: %free"
-	format_not_mounted = "DISK: Not Mounted"
+	format = "D: %free"
+	format_not_mounted = "D: Not Mounted"
 	prefix_type = custom
 	low_threshold = 2
-	format_below_threshold = "DISK: Warning: %free Free Space"
+	format_below_threshold = "D: Warning: %free Free Space"
 	threshold_type = gbytes_free
 }
 
@@ -90,12 +90,12 @@ load {
 
 memory {
 	# %total | %free | %used | %available | %shared
-	format = "RAM: %used"
+	format = "M: %used"
 	unit = auto
 	decimals = 1
 	threshold_degraded = 1G
 	threshold_critical = 1G
-	format_degraded ="RAM: Low Memory: %free"
+	format_degraded ="M: Low Memory: %free"
 }
 
 tztime local {
@@ -105,6 +105,6 @@ tztime local {
 ## Module :: volume 
 volume master {
 	device = "pulse"
-	format = "VOL: %volume"
-	format_muted = "VOL: Muted"
+	format = "V: %volume"
+	format_muted = "V: Muted"
 }
