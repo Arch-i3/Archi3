@@ -215,6 +215,9 @@ bindsym $mod+shift+p exec --no-startup-id pamac-manager
 # Task manager
 bindsym $mod+t  exec lxtask
 
+# Media Player
+bindsym $mod+m  exec mpv
+
 # Power manager
 exec --no-startup-id mate-power-manager 
 exec xautolock -time 30 -locker '&& i3lock -p' -notify 30 -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'"
@@ -237,7 +240,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # Audio
 #exec_always --no-startup-id pasystray
-exec --no-startup-id pasystray
+#exec --no-startup-id pasystray
 
 bar {
         status_command i3status
