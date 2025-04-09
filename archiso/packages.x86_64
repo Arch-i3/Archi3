@@ -302,6 +302,8 @@ lxtask
 
 # Picture viewer
 viewnior
+libavif
+libheif
 
 # Terminal emulator
 alacritty
