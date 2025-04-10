@@ -155,6 +155,14 @@ alci-calamares-config
 mkinitcpio-openswap
 ckbcomp
 kcrash
+hwinfo
+kconfig
+kparts
+kpmcore
+libpwquality
+yaml-cpp
+python-pyaml
+python-unidecode
 
 
 #######################################################
