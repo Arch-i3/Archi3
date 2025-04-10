@@ -7,8 +7,8 @@ notification_type=1
 
 [StatusIcon]
 stepsize=5
-onclick=xterm -e 'alsamixer'
-theme=Default
+onclick=xterm -e 'xfce4-mixer'
+theme=Materia
 use_panel_specific_icons=true
 lmb_slider=false
 mmb_mute=false
