@@ -253,7 +253,7 @@ pipewire
 pipewire-alsa
 pipewire-pulse
 volumeicon
-pasystray
+#pasystray
 
 ##### sddm display manager
 sddm
