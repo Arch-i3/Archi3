@@ -253,6 +253,7 @@ pipewire
 pipewire-alsa
 pipewire-pulse
 volumeicon
+xfce4-mixer
 #pasystray
 
 ##### sddm display manager
