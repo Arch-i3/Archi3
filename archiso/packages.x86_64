@@ -265,6 +265,7 @@ pipewire-jack
 pulsemixer
 pavucontrol
 gst-plugin-pipewire
+pasystray
 #wireplumber
 
 ##### sddm display manager
