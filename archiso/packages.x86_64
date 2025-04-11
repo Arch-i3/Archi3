@@ -258,11 +258,16 @@ papirus-folders
 
 ## Audio
 pipewire
+#wireplumber
 pipewire-alsa
 pipewire-pulse
-volumeicon
-xfce4-mixer
+pipewire-jack
+#volumeicon
+#xfce4-mixer
 #pasystray
+pulsemixer
+pavucontrol
+gst-plugin-pipewire
 
 ##### sddm display manager
 sddm
