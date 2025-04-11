@@ -239,8 +239,8 @@ exec_always --no-startup-id numlockx on
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # Audio
-#exec_always --no-startup-id pasystray
-exec --no-startup-id volumeicon
+exec_always --no-startup-id pasystray
+#exec --no-startup-id volumeicon
 
 bar {
         status_command i3status
