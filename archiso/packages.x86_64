@@ -328,6 +328,16 @@ gst-plugins-good
 gst-plugins-ugly
 gst-plugins-bad
 
+# Audio Player
+deadbeef
+libmad
+libcddb
+intltool
+libdispatch
+libzip
+yasm
+opusfile
+
 # Dynamic menu
 dmenu
 
