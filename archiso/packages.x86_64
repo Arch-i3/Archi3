@@ -344,11 +344,11 @@ dmenu
 # Bluetooth managrt
 blueman
 bluez
-bluez-cups
-bluez-deprecated-tools
-bluez-hid2hci
-bluez-mesh
-bluez-tools
+#bluez-cups
+#bluez-deprecated-tools
+#bluez-hid2hci
+#bluez-mesh
+#bluez-tools
 bluez-utils
 
 # Weather
