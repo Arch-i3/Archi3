@@ -31,6 +31,7 @@ Use the smallest and thinnest application possible.
 - [Blueman](https://github.com/blueman-project/blueman) is a GTK+ Bluetooth Manager
 - [Alacritty](https://alacritty.org/) terminal
 - [mpv](https://mpv.io/) a free, open source, and cross-platform media player
+- [DeadBeef](https://deadbeef.sourceforge.io/) is a modular cross-platform audio player with DSD support
 - [Gnome Weather](https://apps.gnome.org/hu/Weather/) a weather app
 
 - Material Design ([Materia](https://github.com/nana-4/materia-theme) theme, [Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme) icon theme)
