@@ -96,7 +96,12 @@ Special thanks to the [Archcraft](https://github.com/archcraft-os), [Arcolinux](
 #
 ## Download
 
-The iso can be downloaded [here](https://www.mediafire.com/file/9rjniezkg01rc8c/Archi3-2025.03.11-x86_64.iso/file)
+The iso can be downloaded here:
+> | version  | link |
+> | ------------- | ------------- |
+> |v0.4-beta | [download](https://www.mediafire.com/file/wab2hrml3tjuyqi/Archi3-2025.05.09-x86_64.iso/file) |
+> |v0.1-beta | [download](https://www.mediafire.com/file/9rjniezkg01rc8c/Archi3-2025.03.11-x86_64.iso/file) |
+
 
 #
 ## Creating a USB
