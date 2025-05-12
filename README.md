@@ -48,9 +48,7 @@ For example:
 
 <img align="left" width="100" src="https://www.worldwildlife.org/assets/structure/unique/logo-c562409bb6158bf64e5f8b1be066dbd5983d75f5ce7c9935a5afffbcc03f8e5d.png">
 
-Thanks to our way of life, several animal species are threatened with extinction. I would like to pay tribute to these animals with the names of the versions. and alert people to the dangers.
-
-Each release bears the name of an endangered species.
+Each edition is named after an endangered species, a list of which can be found on the WWF [website](https://www.worldwildlife.org/species/directory?direction=desc&sort=extinction_status).
 
 > [!IMPORTANT]
 > WWF® and ©1986 Panda Symbol are owned by WWF. All rights reserved.
