@@ -206,6 +206,8 @@ plymouth-theme-archi3
 
 ##### Xorg
 xorg
+xorg-drivers
+
 
 ## GPU Drivers (Intel/AMD/VM) ------------------------------
 xf86-video-fbdev
