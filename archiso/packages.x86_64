@@ -357,7 +357,7 @@ bluez-deprecated-tools
 bluez-hid2hci
 bluez-mesh
 bluez-tools
-luez-utils
+bluez-utils
 
 # Weather
 gnome-weather
