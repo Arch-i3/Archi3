@@ -151,19 +151,8 @@ alci-calamares-config
 #alci-calamares-config-xanmod
 #alci-calamares-config-zen
 #xterm
-#gparted
-mkinitcpio-openswap
-ckbcomp
-kcrash
-hwinfo
-kconfig
-kparts
-kpmcore
-libpwquality
-yaml-cpp
-python-pyaml
-python-unidecode
-doxygen
+gparted
+
 
 
 #######################################################
@@ -179,6 +168,22 @@ xorg-xkill
 xterm
 xorg-xrdb
 mkinitcpio-openswap
+
+# Calamares
+mkinitcpio-openswap
+ckbcomp
+kcrash
+hwinfo
+kconfig
+kparts
+kpmcore
+libpwquality
+yaml-cpp
+python-pyaml
+python-unidecode
+doxygen
+hwinfo
+squashfs-tools
 
 ## Network
 networkmanager
