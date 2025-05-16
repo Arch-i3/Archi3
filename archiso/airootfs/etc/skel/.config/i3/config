@@ -210,7 +210,7 @@ bindsym $mod+shift+t exec geany
 bindsym $mod+shift+m exec lxrandr
 
 # Package manager
-bindsym $mod+shift+p exec --no-startup-id pamac-manager
+bindsym $mod+shift+p exec --no-startup-id bauh
 
 # Task manager
 bindsym $mod+t  exec lxtask
@@ -284,17 +284,9 @@ bar {
 		
 		# To make i3bar higher (without increasing the font size), and/or add padding to the left and right side of i3bar, you can use the padding directive:
 		# 2px left/right and 2px top/bottom padding
-		#padding 2px
-
-		# 2px top/bottom padding, no left/right padding
-		#padding 2px 0
+		padding 2px
 
 		# 2px top padding, no left/right padding, 4px bottom padding
-		#padding 2px 0 4px
-		
-		# 2px top padding, 6px right padding, 4px bottom padding, 1px left padding
-		padding 6px 6px 4px 1px
-		
-		#i3bar can support transparency by passing the --transparency flag in the configuration:
-		#i3bar_command i3bar --transparency
+		padding 2px 0 4px
+	
 }
