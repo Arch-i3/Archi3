@@ -308,7 +308,8 @@ hwinfo
 
 # Browser
 firefox
-surf
+#surf
+qutebrowser
 
 # Mail clinet
 thunderbird
