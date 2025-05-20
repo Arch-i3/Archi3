@@ -291,9 +291,6 @@ i3
 # Wallpapers
 feh
 
-
-
-
 # Notification
 dunst
 
@@ -307,12 +304,13 @@ webp-pixbuf-loader-git
 hwinfo
 
 # Browser
-firefox
+#firefox
 #surf
 qutebrowser
 
 # Mail clinet
-thunderbird
+#thunderbird
+claws-mail
 
 # Text editor
 geany
@@ -402,7 +400,6 @@ archiso
 # Virtualization
 virt-manager
 qemu
-
 
 ## Archives
 bzip2
