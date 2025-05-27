@@ -1,0 +1,37 @@
+#!/bin/bash
+pacman -S qemu-desktop
+wget http://os.archlinuxarm.org/os/ArchLinuxARM-aarch64-latest.tar.gz
+qemu-img create -f raw archlinuxarm.img 5G
+parted archlinuxarm.img --script -- mklabel msdos
+parted archlinuxarm.img --script -- mkpart primary ext4 1MiB 100%
+sudo losetup -fP archlinuxarm.img
+sudo mkfs.ext4 /dev/loop0p1
+sudo mount /dev/loop0p1 /mnt
+sudo tar -xpf ArchLinuxARM-aarch64-latest.tar.gz -C /mnt
+sudo cp /mnt/boot/initramfs-linux.img .
+sudo chown $USER:$USER initramfs-linux.img
+cp /mnt/boot/Image .
+sudo sync
+sudo umount /mnt
+sudo losetup -d /dev/loop0
+cat > run.sh <<- "EOF"
+#!/bin/bash
+
+qemu-system-aarch64 \
+	-M virt \
+	-cpu cortex-a53 \
+	-smp cores=6,threads=2,sockets=1 \
+	-m 4G \
+	-kernel Image \
+	-initrd initramfs-linux.img \
+	-append "root=/dev/vda1 rw console=ttyAMA0" \
+	-drive file=archlinuxarm.img,if=virtio,format=raw \
+	-net nic -net user,hostfwd=tcp::2222-:22 \
+	-display gtk,gl=on \
+	-device virtio-gpu-pci \
+	-device virtio-keyboard-pci \
+	-device virtio-tablet-pci
+
+EOF
+chmod +x ./run.sh
+./run.sh
