@@ -308,6 +308,11 @@ hwinfo
 #firefox
 #surf
 qutebrowser
+#qtwebkit
+#qt4
+#gperf
+#python2
+#ruby
 
 # Mail clinet
 #thunderbird
