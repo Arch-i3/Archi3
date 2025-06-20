@@ -1,0 +1,10 @@
+#!/bin/bash
+if [ -z $(pgrep ^first$) ]
+then 
+  :
+else 
+  echo "first script is already running!"
+  exit
+fi
+
+echo "pcmanfm"
