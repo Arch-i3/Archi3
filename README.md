@@ -27,7 +27,7 @@ Use the smallest and thinnest application possible.
 > | Monitor Settings| lxrandr | xrandr |
 > | Package Manager | bauh | pacman |
 > | Task Manager | lxtask | htop |
-> | Browser | qutebrowser |  |
+> | Browser | qutebrowser |
 
 - [Blueman](https://github.com/blueman-project/blueman) is a GTK+ Bluetooth Manager
 - [Alacritty](https://alacritty.org/) terminal
