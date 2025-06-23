@@ -203,7 +203,8 @@ ufw
 intel-ucode
 
 # Boot
-grub-theme-archi3-git
+#grub-theme-archi3-git
+grub-theme-vimix
 
 ## Splash Screen
 plymouth
