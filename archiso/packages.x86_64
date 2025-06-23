@@ -241,7 +241,7 @@ virtualbox-guest-utils
 qemu-guest-agent
 open-vm-tools
 xf86-input-vmmouse
-xf86-video-vmware
+#xf86-video-vmware
 
 ## Touchpad and Mouse ------------------------------
 xorg-xinput
