@@ -384,6 +384,8 @@ bluez-utils
 gnome-software
 packagekit
 gnome-packagekit
+flatpak
+
 
 # Polkit
 polkit-gnome
