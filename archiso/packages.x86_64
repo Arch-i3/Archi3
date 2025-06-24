@@ -288,7 +288,7 @@ sddm
 
 ## Display Manager ------------------------------
 i3
-sway
+#sway
 
 # Wallpapers
 feh
@@ -297,18 +297,18 @@ feh
 dunst
 
 ### Applications
-iw
-calc
+#iw
+#calc
 
 # File manager
-pcmanfm
-webp-pixbuf-loader-git
-hwinfo
+#pcmanfm
+#webp-pixbuf-loader-git
+#hwinfo
 
 # Browser
 #firefox
 #surf
-qutebrowser
+#qutebrowser
 #qtwebkit
 #qt4
 #gperf
@@ -317,10 +317,10 @@ qutebrowser
 
 # Mail clinet
 #thunderbird
-claws-mail
+#claws-mail
 
 # Text editor
-geany
+#geany
 
 # Randr
 lxrandr
@@ -329,29 +329,29 @@ lxrandr
 lxtask
 
 # Picture viewer
-viewnior
-libavif
-libheif
+#viewnior
+#libavif
+#libheif
 
 # Terminal emulator
-alacritty
+#alacritty
 
 # Media player
-mpv
-gst-libav
-gst-plugins-good
-gst-plugins-ugly
-gst-plugins-bad
+#mpv
+#gst-libav
+#gst-plugins-good
+#gst-plugins-ugly
+#gst-plugins-bad
 
 # Audio Player
-deadbeef
-libmad
-libcddb
-intltool
-libdispatch
-libzip
-yasm
-opusfile
+#deadbeef
+#libmad
+#libcddb
+#intltool
+#libdispatch
+#libzip
+#yasm
+#opusfile
 
 # Dynamic menu
 dmenu
@@ -367,13 +367,13 @@ bluez-tools
 bluez-utils
 
 # Weather
-gnome-weather
+#gnome-weather
 
 # Torrent client
-transmission-gtk
+#transmission-gtk
 
 # GUI Packege Manager
-bauh
+#bauh
 #pamac-aur
 #libpamac-aur
 #picom
@@ -381,14 +381,17 @@ bauh
 #gobject-introspection
 #asciidoc
 #itstool
+gnome-software
+packagekit
+gnome-packagekit
 
 # Polkit
 polkit-gnome
 
 ##Application from local repo
 #paper-icon-theme
-meson
-boost
+#meson
+#boost
 
 # timeshift
 #grub-btrfs
@@ -405,27 +408,27 @@ debugedit
 archiso
 
 # Virtualization
-virt-manager
-qemu
+#virt-manager
+#qemu
 
 ## Archives
-bzip2
-bzip3
-gzip
-lrzip
-lz4
-lzip
-lzop
-xz
-zstd
-p7zip
-zip
-unzip
-unrar
-unarchiver
-arj
-unarj
-xarchiver
+#bzip2
+#bzip3
+#gzip
+#lrzip
+#lz4
+#lzip
+#lzop
+#xz
+#zstd
+#p7zip
+#zip
+#unzip
+#unrar
+#unarchiver
+#arj
+#unarj
+#xarchiver
 
 ## Files
 gvfs
@@ -441,11 +444,11 @@ xdg-user-dirs
 xdg-user-dirs-gtk
 
 # Print
-system-config-printer
-gsfonts
+#system-config-printer
+#gsfonts
 
 # Simple scanning utility
-simple-scan
+#simple-scan
 
 ### Power
 mate-power-manager
@@ -455,5 +458,6 @@ mate-desktop
 boost-libs
 dracut
 #wayland
+
 ## MAC
 apparmor
