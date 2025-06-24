@@ -195,28 +195,28 @@ bindsym $mod+r mode "resize"
 exec_always feh --bg-scale /usr/share/backgrounds/archlinux/reflected.jpg
 
 # start a terminal
-#bindsym $mod+Return exec alacritty
+# bindsym $mod+Return exec alacritty
 
 # start a browser
-bindsym $mod+shift+b exec firefox
+# bindsym $mod+shift+b exec firefox
 
 # start a File Manager
 bindsym $mod+shift+f exec pcmanfm
 
 # start a Text Editor
-bindsym $mod+shift+t exec geany
+# bindsym $mod+shift+t exec geany
 
 # start a Monitor settings
 bindsym $mod+shift+m exec lxrandr
 
 # Package manager
-bindsym $mod+shift+p exec --no-startup-id bauh
+# bindsym $mod+shift+p exec --no-startup-id bauh
 
 # Task manager
 bindsym $mod+t  exec lxtask
 
 # Media Player
-bindsym $mod+m  exec mpv
+# bindsym $mod+m  exec mpv
 
 # Power manager
 exec --no-startup-id mate-power-manager 
