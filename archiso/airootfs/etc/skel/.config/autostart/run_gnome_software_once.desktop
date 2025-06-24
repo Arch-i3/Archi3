@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Exec=/home/sandor/run_gnome_software_once.sh
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name=Run GNOME Software Once
