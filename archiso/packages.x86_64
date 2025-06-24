@@ -301,9 +301,9 @@ dunst
 #calc
 
 # File manager
-#pcmanfm
-#webp-pixbuf-loader-git
-#hwinfo
+pcmanfm
+webp-pixbuf-loader-git
+hwinfo
 
 # Browser
 #firefox
