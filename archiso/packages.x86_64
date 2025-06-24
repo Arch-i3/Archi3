@@ -151,7 +151,7 @@ alci-calamares-config
 #alci-calamares-config-xanmod
 #alci-calamares-config-zen
 #xterm
-gparted
+#gparted
 
 
 
@@ -199,7 +199,7 @@ ufw
 #gufw
 
 ##### CPU drivers
-#amd-ucode 
+amd-ucode 
 intel-ucode
 
 # Boot
