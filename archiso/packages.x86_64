@@ -385,6 +385,10 @@ itstool
 #packagekit
 #gnome-packagekit
 flatpak
+xdg-desktop-portal
+xdg-desktop-portal-gtk
+xdg-desktop-portal-gnome
+
 
 
 # Polkit
