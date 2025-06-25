@@ -374,16 +374,16 @@ bluez-utils
 
 # GUI Packege Manager
 #bauh
-#pamac-aur
-#libpamac-aur
-#picom
-#vala
-#gobject-introspection
-#asciidoc
-#itstool
-gnome-software
-packagekit
-gnome-packagekit
+pamac-flatpak
+ibpamac-flatpak
+picom
+vala
+gobject-introspection
+asciidoc
+itstool
+#gnome-software
+#packagekit
+#gnome-packagekit
 flatpak
 
 
