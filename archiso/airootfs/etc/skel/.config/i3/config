@@ -210,7 +210,7 @@ bindsym $mod+shift+f exec pcmanfm
 bindsym $mod+shift+m exec lxrandr
 
 # Package manager
-# bindsym $mod+shift+p exec --no-startup-id bauh
+# bindsym $mod+shift+p exec --no-startup-id pamac-manager
 
 # Task manager
 bindsym $mod+t  exec lxtask
