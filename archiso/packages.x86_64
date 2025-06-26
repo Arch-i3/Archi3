@@ -388,8 +388,7 @@ flatpak
 xdg-desktop-portal
 xdg-desktop-portal-gtk
 xdg-desktop-portal-gnome
-
-
+xdg-desktop-portal-kde
 
 # Polkit
 polkit-gnome
