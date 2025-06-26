@@ -1,0 +1,11 @@
+[Runtime]
+name=org.gtk.Gtk3theme.Materia
+runtime=org.freedesktop.Sdk/x86_64/19.08
+sdk=org.freedesktop.Sdk/x86_64/19.08
+
+[ExtensionOf]
+ref=runtime/org.freedesktop.Sdk/x86_64/19.08
+runtime=org.freedesktop.Sdk/x86_64/19.08
+
+[Build]
+built-extensions=org.gtk.Gtk3theme.Materia.Sources;

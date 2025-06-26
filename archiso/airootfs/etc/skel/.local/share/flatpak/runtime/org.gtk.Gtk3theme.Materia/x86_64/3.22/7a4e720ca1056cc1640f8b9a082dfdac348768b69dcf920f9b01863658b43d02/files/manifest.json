@@ -1,0 +1,48 @@
+{
+  "id" : "org.gtk.Gtk3theme.Materia",
+  "branch" : "3.22",
+  "runtime" : "org.freedesktop.Sdk",
+  "runtime-version" : "19.08",
+  "runtime-commit" : "9e5d07718e6c7426a082789197edc532d5130951265349c1bc075b84309f154d",
+  "sdk" : "org.freedesktop.Sdk",
+  "sdk-commit" : "9e5d07718e6c7426a082789197edc532d5130951265349c1bc075b84309f154d",
+  "modules" : [
+    {
+      "name" : "Materia",
+      "buildsystem" : "simple",
+      "sources" : [
+        {
+          "url" : "https://github.com/nana-4/materia-theme/archive/v20191017.tar.gz",
+          "sha256" : "ab60f2b79f4b22cefa432d00bae8456e27073d2ba22297da0ea92ac09c994d71",
+          "type" : "archive"
+        }
+      ],
+      "build-commands" : [
+        "mkdir -pm 755 /usr/share/runtime/share/themes/Materia/gtk-3.0",
+        "cp src/gtk/3.0/gtk.css /usr/share/runtime/share/themes/Materia/gtk-3.0/gtk.css",
+        "cp src/gtk/3.0/gtk-dark.css /usr/share/runtime/share/themes/Materia/gtk-3.0/gtk-dark.css",
+        "cp -r src/gtk/assets /usr/share/runtime/share/themes/Materia/gtk-3.0"
+      ]
+    },
+    {
+      "name" : "appdata",
+      "buildsystem" : "simple",
+      "sources" : [
+        {
+          "path" : "org.gtk.Gtk3theme.Materia.appdata.xml",
+          "type" : "file"
+        }
+      ],
+      "build-commands" : [
+        "mkdir -p ${FLATPAK_DEST}/share/appdata",
+        "cp org.gtk.Gtk3theme.Materia.appdata.xml ${FLATPAK_DEST}/share/appdata",
+        "appstream-compose --basename=org.gtk.Gtk3theme.Materia --prefix=${FLATPAK_DEST} --origin=flatpak org.gtk.Gtk3theme.Materia"
+      ]
+    }
+  ],
+  "build-extension" : true,
+  "separate-locales" : false,
+  "appstream-compose" : false,
+  "tags" : [
+  ]
+}
