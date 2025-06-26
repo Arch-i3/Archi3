@@ -212,7 +212,7 @@ plymouth-theme-archi3
 
 ##### Xorg
 xorg
-xorg-drivers
+#xorg-drivers
 
 
 ## GPU Drivers (Intel/AMD/VM) ------------------------------
