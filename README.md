@@ -23,11 +23,9 @@ Use the smallest and thinnest application possible.
 > | ------------- | ------------- |----------|
 > | Menu  | dmenu |
 > | File Manager | PCManFM | Midnight Commander |
-> | Text editor| Geany | nano |
 > | Monitor Settings| lxrandr | xrandr |
 > | Package Manager | bauh | pacman |
 > | Task Manager | lxtask | htop |
-> | Browser | qutebrowser |
 
 - [Blueman](https://github.com/blueman-project/blueman) is a GTK+ Bluetooth Manager
 - [Alacritty](https://alacritty.org/) terminal
@@ -72,11 +70,9 @@ Keys to use with Shift+$mod:
 > | ------------- | ------------- |
 > | $mod+d  | open application launcher (dmenu)  |
 > | $mod+shift+q  | kill a window  |
-> | $mod+shift+f  | File Manager  |
-> | $mod+shift+b  | Browser  |
-> | $mod+shift+t  | Text Editor  |
+> | $mod+f  | File Manager  |
 > | $mod+Return  | Terminal Emulator  |
-> | $mod+shift+m  | Monitor settings  |
+> | $mod+m  | Monitor settings  |
 > | $mod+shift+p  | Package manager  |
 > | $mod+p  | Power manager  |
 > | $mod+n  | Network manager  |
