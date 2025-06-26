@@ -28,10 +28,6 @@ Use the smallest and thinnest application possible.
 > | Task Manager | lxtask | htop |
 
 - [Blueman](https://github.com/blueman-project/blueman) is a GTK+ Bluetooth Manager
-- [Alacritty](https://alacritty.org/) terminal
-- [mpv](https://mpv.io/) a free, open source, and cross-platform media player
-- [DeaDBeeF](https://deadbeef.sourceforge.io/) is a modular cross-platform audio player with DSD support
-- [Gnome Weather](https://apps.gnome.org/hu/Weather/) a weather app
 
 - Material Design ([Materia](https://github.com/nana-4/materia-theme) theme, [Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme) icon theme)
 - Low CPU usage + Low memory usage + Energy saving = Lower [ecological footprint](https://en.wikipedia.org/wiki/Ecological_footprint)
