@@ -199,7 +199,7 @@ ufw
 #gufw
 
 ##### CPU drivers
-amd-ucode 
+#amd-ucode 
 intel-ucode
 
 # Boot
@@ -375,7 +375,7 @@ bluez-utils
 # GUI Packege Manager
 #bauh
 pamac-flatpak
-ibpamac-flatpak
+libpamac-flatpak
 picom
 vala
 gobject-introspection
