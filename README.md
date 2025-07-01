@@ -66,9 +66,9 @@ Keys to use with Shift+$mod:
 > | ------------- | ------------- |
 > | $mod+d  | open application launcher (dmenu)  |
 > | $mod+shift+q  | kill a window  |
-> | $mod+f  | File Manager  |
+> | $mod+shift+f  | File Manager  |
 > | $mod+Return  | Terminal Emulator  |
-> | $mod+m  | Monitor settings  |
+> | $mod+shift+m  | Monitor settings  |
 > | $mod+shift+p  | Package manager  |
 > | $mod+p  | Power manager  |
 > | $mod+n  | Network manager  |
