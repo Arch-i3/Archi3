@@ -248,7 +248,9 @@ bar {
               
 		# Take a screenshot by right clicking on the bar
 		bindsym --release button3 exec --no-startup-id import /$HOME/Screenshot-$(date +%Y-%m-%d_%H:%M:%S).png
-    	
+  	  	# Take a screenshot upon pressing $mod+s (select an area)
+		bindsym --release $mod+s exec --no-startup-id import /$HOME/Screenshot-$(date +%Y-%m-%d_%H:%M:%S).png
+
 		# Position
 		position bottom
 		
