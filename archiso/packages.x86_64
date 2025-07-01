@@ -448,8 +448,8 @@ xdg-user-dirs
 xdg-user-dirs-gtk
 
 # Print
-#system-config-printer
-#gsfonts
+system-config-printer
+gsfonts
 
 # Simple scanning utility
 #simple-scan
