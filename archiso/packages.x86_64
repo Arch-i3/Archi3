@@ -376,6 +376,9 @@ bluez-utils
 #bauh
 pamac-flatpak
 libpamac-flatpak
+intltool
+meson
+
 picom
 vala
 gobject-introspection
