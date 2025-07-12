@@ -288,7 +288,6 @@ sddm-theme-archi3
 
 ## Display Manager ------------------------------
 i3
-#sway
 
 # Wallpapers
 feh
@@ -296,31 +295,10 @@ feh
 # Notification
 dunst
 
-### Applications
-#iw
-#calc
-
 # File manager
 pcmanfm
 webp-pixbuf-loader-git
 hwinfo
-
-# Browser
-#firefox
-#surf
-#qutebrowser
-#qtwebkit
-#qt4
-#gperf
-#python2
-#ruby
-
-# Mail clinet
-#thunderbird
-#claws-mail
-
-# Text editor
-#geany
 
 # Randr
 lxrandr
@@ -336,23 +314,6 @@ lxtask
 # Terminal emulator
 #alacritty
 
-# Media player
-#mpv
-#gst-libav
-#gst-plugins-good
-#gst-plugins-ugly
-#gst-plugins-bad
-
-# Audio Player
-#deadbeef
-#libmad
-#libcddb
-#intltool
-#libdispatch
-#libzip
-#yasm
-#opusfile
-
 # Dynamic menu
 dmenu
 
@@ -366,14 +327,7 @@ bluez-mesh
 bluez-tools
 bluez-utils
 
-# Weather
-#gnome-weather
-
-# Torrent client
-#transmission-gtk
-
 # GUI Packege Manager
-#bauh
 pamac-flatpak
 libpamac-flatpak
 intltool
@@ -384,9 +338,6 @@ vala
 gobject-introspection
 asciidoc
 itstool
-#gnome-software
-#packagekit
-#gnome-packagekit
 flatpak
 xdg-desktop-portal
 xdg-desktop-portal-gtk
@@ -394,11 +345,6 @@ xdg-desktop-portal-gnome
 
 # Polkit
 polkit-gnome
-
-##Application from local repo
-#paper-icon-theme
-#meson
-#boost
 
 # timeshift
 #grub-btrfs
@@ -413,29 +359,6 @@ ninja
 qt6-tools
 debugedit
 archiso
-
-# Virtualization
-#virt-manager
-#qemu
-
-## Archives
-#bzip2
-#bzip3
-#gzip
-#lrzip
-#lz4
-#lzip
-#lzop
-#xz
-#zstd
-#p7zip
-#zip
-#unzip
-#unrar
-#unarchiver
-#arj
-#unarj
-#xarchiver
 
 ## Files
 gvfs
@@ -453,9 +376,6 @@ xdg-user-dirs-gtk
 # Print
 system-config-printer
 gsfonts
-
-# Simple scanning utility
-#simple-scan
 
 ### Power
 mate-power-manager
