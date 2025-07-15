@@ -203,8 +203,7 @@ ufw
 intel-ucode
 
 # Boot
-#grub-theme-archi3-git
-grub-theme-vimix
+grub-theme-archi3
 
 ## Splash Screen
 plymouth
@@ -254,16 +253,19 @@ xf86-input-libinput
 ttf-roboto
 
 # Theme
-materia-gtk-theme
-materia-kde
+adwaita-icon-theme
+adwaita-cursors
+adwaita-fonts
+#materia-gtk-theme
+#materia-kde
 kvantum
 kvantum-qt5
-kvantum-theme-materia
+#kvantum-theme-materia
 qt5ct
 qt6ct
 #gtk3-nocsd-git
-papirus-icon-theme
-papirus-folders
+#papirus-icon-theme
+#papirus-folders
 
 ## Audio
 pipewire
