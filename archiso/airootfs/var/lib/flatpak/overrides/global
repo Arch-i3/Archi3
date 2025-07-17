@@ -1,5 +1,5 @@
-[Context]
-filesystems=/home/kakuk/.themes;
+#[Context]
+#filesystems=/home/kakuk/.themes;
 
 [Environment]
 GTK_THEME=Materia
