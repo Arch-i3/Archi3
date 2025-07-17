@@ -211,10 +211,8 @@ plymouth-theme-archi3
 
 ##### Xorg
 xorg
-#xorg-drivers
 
-
-## GPU Drivers (Intel/AMD/VM) ------------------------------
+## GPU Drivers (Intel/AMD/VM) 
 xf86-video-fbdev
 xf86-video-vesa
 xf86-video-intel
@@ -229,20 +227,20 @@ mesa-utils
 #systemctl start vboxservice
 #to have fullscreen
 
-## GPU Drivers (Nvidia) ------------------------------
+## GPU Drivers (Nvidia) 
 #xf86-video-nouveau
 #nvidia
 #nvidia-utils
 #nvidia-setting
 
-## Hypervisors ------------------------------
+## Hypervisors 
 virtualbox-guest-utils
 qemu-guest-agent
 open-vm-tools
 xf86-input-vmmouse
 #xf86-video-vmware
 
-## Touchpad and Mouse ------------------------------
+## Touchpad and Mouse 
 xorg-xinput
 xf86-input-libinput
 
@@ -288,7 +286,7 @@ sddm
 ##### want to have linux-headers
 #linux-headers
 
-## Display Manager ------------------------------
+## Display Manager 
 i3
 
 # Wallpapers
