@@ -14,6 +14,7 @@ Use the smallest and thinnest application possible.
 - [Arch Linux](https://archlinux.org/) base system
 - [Calamares](https://calamares.io/) GUI installer
 - [i3](https://i3wm.org/) tiling window manager
+- Just enough Desktop, minimal applications, everything else can be installed with the package manager.
 
 ## Applications
 
