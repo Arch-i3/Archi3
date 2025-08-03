@@ -333,6 +333,18 @@ libpamac-flatpak
 intltool
 meson
 
+gnome-software
+gnome-software-packagekit-plugin-appstream-git
+fwupd
+gnome-online-accounts
+gspell
+libpackagekit-glib
+malcontent
+meson
+valgrind
+glib2-devel
+
+
 picom
 vala
 gobject-introspection
