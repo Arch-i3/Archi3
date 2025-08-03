@@ -333,10 +333,10 @@ libpamac-flatpak
 intltool
 meson
 
-gnome-software
+#gnome-software
 libglib-testing
 
-gnome-software-packagekit-plugin-appstream-git
+#gnome-software-packagekit-plugin-appstream-git
 fwupd
 gnome-online-accounts
 gspell
@@ -394,7 +394,6 @@ gsfonts
 ### Power
 mate-power-manager
 mate-desktop
-#xfce4-power-manager
 
 boost-libs
 dracut
