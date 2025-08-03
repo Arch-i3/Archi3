@@ -334,6 +334,8 @@ intltool
 meson
 
 gnome-software
+libglib-testing
+
 gnome-software-packagekit-plugin-appstream-git
 fwupd
 gnome-online-accounts
