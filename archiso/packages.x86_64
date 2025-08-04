@@ -289,6 +289,9 @@ sddm
 ## Display Manager 
 i3
 
+# i3 screenshot
+imagemagick
+
 # Wallpapers
 feh
 
