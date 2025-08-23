@@ -277,11 +277,11 @@ pasystray
 #wireplumber
 
 ##### sddm display manager
-#sddm
+sddm
 #sddm-theme-archi3
 
 # Pisplay manager
-lemurs
+#lemurs
 
 ##### want to have base-devel group
 #base-devel
