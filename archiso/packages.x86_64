@@ -277,8 +277,11 @@ pasystray
 #wireplumber
 
 ##### sddm display manager
-sddm
+#sddm
 #sddm-theme-archi3
+
+# Pisplay manager
+lemurs
 
 ##### want to have base-devel group
 #base-devel
@@ -295,6 +298,9 @@ feh
 # Notification
 dunst
 
+# Browser
+firefox
+
 # File manager
 pcmanfm
 webp-pixbuf-loader-git
@@ -307,12 +313,12 @@ lxrandr
 lxtask
 
 # Picture viewer
-#viewnior
-#libavif
-#libheif
+viewnior
+libavif
+libheif
 
 # Terminal emulator
-#alacritty
+alacritty
 
 # Dynamic menu
 dmenu
@@ -328,23 +334,23 @@ bluez-tools
 bluez-utils
 
 # GUI Packege Manager
-pamac-flatpak
-libpamac-flatpak
-intltool
-meson
+#pamac-flatpak
+#libpamac-flatpak
+#intltool
+#meson
 
 #gnome-software
-libglib-testing
+#libglib-testing
 
 #gnome-software-packagekit-plugin-appstream-git
-fwupd
-gnome-online-accounts
-gspell
-libpackagekit-glib
-malcontent
-meson
-valgrind
-glib2-devel
+#fwupd
+#gnome-online-accounts
+#gspell
+#libpackagekit-glib
+#malcontent
+#meson
+#valgrind
+#glib2-devel
 
 
 picom
