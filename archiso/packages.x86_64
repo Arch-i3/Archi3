@@ -401,6 +401,9 @@ gsfonts
 mate-power-manager
 mate-desktop
 
+# Control center
+mate-control-center
+
 boost-libs
 dracut
 #wayland
