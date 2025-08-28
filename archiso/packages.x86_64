@@ -335,6 +335,7 @@ bluez-utils
 
 # GUI Packege Manager
 #pamac-flatpak
+pamac-gtk3
 #libpamac-flatpak
 #intltool
 appstream-glib
