@@ -299,7 +299,7 @@ feh
 dunst
 
 # Browser
-firefox
+qutebrowser
 
 # File manager
 pcmanfm
@@ -337,7 +337,9 @@ bluez-utils
 #pamac-flatpak
 #libpamac-flatpak
 #intltool
-#meson
+appstream-glib
+libpamac-aur
+meson
 
 #gnome-software
 #libglib-testing
