@@ -281,7 +281,7 @@ sddm
 #sddm-theme-archi3
 
 # Pisplay manager
-#lemurs
+# lemurs
 
 ##### want to have base-devel group
 #base-devel
@@ -322,6 +322,12 @@ alacritty
 
 # Dynamic menu
 dmenu
+
+# Text editor
+geany
+
+# Media Player
+mpv
 
 # Bluetooth managrt
 blueman
