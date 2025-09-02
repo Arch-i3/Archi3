@@ -207,7 +207,7 @@ bindsym $mod+shift+f exec pcmanfm
 # bindsym $mod+shift+t exec geany
 
 # start a Monitor settings
-bindsym $mod+shift+m exec lxrandr
+bindsym $mod+shift+d exec mate-display-properties
 
 # Package manager
 bindsym $mod+shift+p exec --no-startup-id pamac-manager
