@@ -91,6 +91,7 @@ Special thanks to the [Archcraft](https://github.com/archcraft-os), [Arcolinux](
 The iso can be downloaded here:
 > | version  | link |
 > | ------------- | ------------- |
+> |v0.6-beta | [download](https://drive.google.com/file/d/1waeSd_zQjVIskWBkxJrDQTYJHQUm2hAP/view?usp=sharing/file) |
 > |v0.5-beta | [download](https://www.mediafire.com/file/hii9kl7bpsvxn1f/Archi3-2025.06.27-x86_64.iso/file) |
 > |v0.4-beta | [download](https://www.mediafire.com/file/wab2hrml3tjuyqi/Archi3-2025.05.09-x86_64.iso/file) |
 > |v0.1-beta | [download](https://www.mediafire.com/file/9rjniezkg01rc8c/Archi3-2025.03.11-x86_64.iso/file) |
