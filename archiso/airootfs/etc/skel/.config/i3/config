@@ -207,7 +207,7 @@ bindsym $mod+shift+f exec pcmanfm
 # bindsym $mod+shift+t exec geany
 
 # start a Monitor settings
-bindsym $mod+shift+d exec mate-display-properties
+bindsym $mod+shift+m exec lxrandr
 
 # Package manager
 bindsym $mod+shift+p exec --no-startup-id pamac-manager
@@ -242,15 +242,21 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 #exec_always --no-startup-id pasystray
 #exec --no-startup-id volumeicon
 
+# Screenshots
+bindsym Print exec --no-startup-id maim /$HOME/Fullscreenshot-$(date +%Y-%m-%d_%H:%M:%S).png
+
+## Clipboard Screenshots
+bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
+bindsym Ctrl+$mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
+bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
+
 bar {
         status_command i3status
         # disable clicking on workspace buttons
               
 		# Take a screenshot by right clicking on the bar
 		bindsym --release button3 exec --no-startup-id import /$HOME/Screenshot-$(date +%Y-%m-%d_%H:%M:%S).png
-  	  	# Take a screenshot upon pressing $mod+s (select an area)
-		bindsym --release $mod+s exec --no-startup-id import /$HOME/Screenshot-$(date +%Y-%m-%d_%H:%M:%S).png
-
+  	  	
 		# Position
 		position bottom
 		
