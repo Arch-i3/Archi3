@@ -348,6 +348,10 @@ appstream-glib
 libpamac-aur
 meson
 
+# Screenshots
+imagemagick
+maim
+
 #gnome-software
 #libglib-testing
 
