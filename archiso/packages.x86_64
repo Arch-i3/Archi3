@@ -249,6 +249,7 @@ xf86-input-libinput
 #noto-fonts-emoji
 #noto-fonts-cjk
 ttf-roboto
+ttf-jetbrains-mono-nerd 
 
 # Theme
 #adwaita-icon-theme
