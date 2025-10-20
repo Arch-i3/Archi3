@@ -31,8 +31,14 @@ order += "volume master"
 order += "tztime local"
 
 wireless _first_ {
-        format_up = "W: (%quality at %essid) %ip"
-        format_down = "W: down"
+#       format_up = "W: (%quality at %essid) %ip"
+#       format_down = "W: down"
+		format_up = "  %essid"
+		format_down = "  Disconnected"
+		format_bitrate = "%g %cb/s"
+		format_noise = "%03d%s"
+		format_quality = "%03d%s"
+		format_signal = "%03d%s"
 }
 
 ethernet _first_ {
@@ -50,11 +56,15 @@ battery all {
 	hide_seconds = true
 	low_threshold = 20
 	threshold_type = percentage
-	status_chr = "B: CHR"
+#	status_chr = "B: CHR"
 #	status_bat = ""
-	status_unk = "B: UNK "
-	status_full = "B: FULL"
-	status_idle = "B: IDLE"
+#	status_unk = "B: UNK "
+#	status_full = "B: FULL"
+#	status_idle = "B: IDLE"
+	status_chr = ""
+	status_bat = " "
+	status_unk = " "
+	status_full = " "
 }
 
 ## Module :: cpu_usage 
@@ -71,40 +81,53 @@ cpu_temperature 0 {
 	path = "/sys/devices/platform/coretemp.0/temp1_input"
 	format = "%degrees °C"
 	max_threshold = 60
-	format_above_threshold = "Warning: %degrees °C"
+#	format_above_threshold = "Warning: %degrees °C"
+	format_above_threshold = "  Warning: %degrees °C"
 }
 
 disk "/" {
 	# %free | %avail | %total | %percentage_used/free/avail
-	format = "D: %free"
-	format_not_mounted = "D: Not Mounted"
+#	format = "D: %free"
+	format = "  %free"
+#	format_not_mounted = "D: Not Mounted"
+	format_not_mounted = "  Not Mounted"
 	prefix_type = custom
 	low_threshold = 2
-	format_below_threshold = "D: Warning: %free Free Space"
+#	format_below_threshold = "D: Warning: %free Free Space"
+	format_below_threshold = "  Warning: %free Free Space"
 	threshold_type = gbytes_free
 }
 
 load {
-        format = "%1min"
+#        format = "%1min"
+        format = " %1min %5min %15min"
+		max_threshold = "5"
+		format_above_threshold = "  Warning: %1min %5min %15min"
 }
 
 memory {
 	# %total | %free | %used | %available | %shared
-	format = "M: %used"
+	format = "  %free"
+#	format = "M: %used"
 	unit = auto
 	decimals = 1
 	threshold_degraded = 1G
 	threshold_critical = 1G
-	format_degraded ="M: Low Memory: %free"
+#	format_degraded ="M: Low Memory: %free"
+	format_degraded = "  Low Memory: %free"
 }
 
 tztime local {
-        format = "%Y-%m-%d %H:%M"
+        format = " %Y-%m-%d %H:%M"
+#        format = "  %I:%M %p"
 }
 
 ## Module :: volume 
 volume master {
+#	device = "pulse"
+#	format = "V: %volume"
+#	format_muted = "V: Muted"
 	device = "pulse"
-	format = "V: %volume"
-	format_muted = "V: Muted"
+	format = "  %volume"
+	format_muted = " Muted"
 }
