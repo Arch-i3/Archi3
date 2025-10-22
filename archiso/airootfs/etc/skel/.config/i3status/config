@@ -69,11 +69,13 @@ battery all {
 
 ## Module :: cpu_usage 
 cpu_usage {
-	format = "P: %usage"
+#	format = "P: %usage"
+	format = "  %usage"
 	degraded_threshold = 25
 	format_above_degraded_threshold = "P: %usage"
 	max_threshold = 75
-	format_above_threshold = "P: Warning: %usage"
+#	format_above_threshold = "P: Warning: %usage"
+	format_above_threshold = "  Warning: %usage"
 }
 
 ## Module :: cpu_temperature 
@@ -118,7 +120,7 @@ memory {
 }
 
 tztime local {
-        format = " %Y-%m-%d %H:%M"
+        format = "  %Y-%m-%d %H:%M"
 #        format = "  %I:%M %p"
 }
 
