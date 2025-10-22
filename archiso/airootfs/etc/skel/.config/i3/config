@@ -13,7 +13,10 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+#font pango:monospace 8
+#set $i3_fonts JetBrainsMono Nerd Font 10
+#font JetBrainsMono Nerd Font 10
+font pango: Roboto 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -253,20 +256,36 @@ bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection c
 bar {
         status_command i3status
         # disable clicking on workspace buttons
-              
+          
+        output primary
+		mode dock
+		hidden_state show
+		modifier Mod1
+		bindsym button2 workspace back_and_forth
+		bindsym --release button3 layout toggle
+		tray_output primary
+		tray_padding 6
+		separator_symbol "|"
+		workspace_buttons yes
+		workspace_min_width 34
+		strip_workspace_numbers yes
+		binding_mode_indicator yes
+		padding 6 10 6 0
+		font pango:$i3_bar_fonts
+				  
 		# Take a screenshot by right clicking on the bar
 		bindsym --release button3 exec --no-startup-id import /$HOME/Screenshot-$(date +%Y-%m-%d_%H:%M:%S).png
   	  	
 		# Position
 		position bottom
 		
-		# The tray is shown on the right-hand side of the bar. By default, a padding of 2 pixels is used for the upper, lower and right-hand side of the tray area and between the individual icons.
+		# The tray is shown on the right-hand side of the bar. By default, a padding of 2 0s is used for the upper, lower and right-hand side of the tray area and between the individual icons.
 		# Obey Fitts's law
 		tray_padding 0
 		
 		# Fonts
-		font pango:Roboto  10
-
+		font pango:Roboto  11
+		
 		# Custom separator symbol
 		separator_symbol "|"
 		
@@ -298,3 +317,8 @@ bar {
 		padding 2px 0 4px
 	
 }
+
+#for_window [class=".*"] border pixel 1
+#bindsym $mod+Shift+b border toggle
+# The same as default_border none
+#default_border pixel 1
