@@ -424,3 +424,8 @@ dracut
 
 ## MAC
 apparmor
+
+### i3blocks blocks
+# backlight
+xorg-xset
+xorg-xbacklight
