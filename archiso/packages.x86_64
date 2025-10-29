@@ -434,4 +434,5 @@ xorg-xbacklight
 upower
 
 # temperature
-temperature
+lm-sensors
+
