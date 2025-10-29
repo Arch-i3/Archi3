@@ -432,3 +432,6 @@ xorg-xbacklight
 
 # key light
 upower
+
+# temperature
+temperature
