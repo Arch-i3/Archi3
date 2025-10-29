@@ -1,0 +1,153 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+# Global properties
+#
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+#command=/usr/lib/i3blocks/$BLOCK_NAME
+command=~.i3blocks/blocks/$BLOCK_NAME
+separator_block_width=15
+markup=none
+
+# Általános beállítások
+separator=true
+markup=pango
+interval=1
+color_good=#98c379
+color_degraded=#e5c07b
+color_bad=#e06c75
+
+# Ethernet
+[ethernet]
+command=~.i3-blocks/blocks/ethernet.sh
+interval=10
+color=#56b6c2
+
+# CPU kihasználtság
+[cpu_usage]
+command=~.i3-blocks/blocks/cpu_usage.sh
+interval=5
+color=#c678dd
+
+# CPU hőmérséklet
+[cpu_temp]
+command=~.i3-blocks/blocks/cpu_temp.sh
+interval=5
+color=#d19a66
+
+#saját
+[cpu_usage]
+command=~/.i3blocks/blocks/cpu_usage
+interval=10
+LABEL=  
+min_width=CPU: 100.00%
+T_WARN=50
+T_CRIT=80
+DECIMALS=2
+#COLOR_NORMAL=#EBDBB2
+COLOR_NORMAL=#FFFFFF
+COLOR_WARN=#FFFC00
+COLOR_CRIT=#FF0000
+
+[wifi]
+command=~/.i3blocks/blocks/wifi
+label=  
+#INTERFACE=wlan0
+interval=60
+click_left=nm-connection-editor
+signal=10
+color=#61afef
+
+[battery]
+command=~/.i3blocks/blocks/battery
+interval=30
+LABEL=  
+#LABEL=⚡
+#BAT_NUMBER=0
+click_left=mate-power-manager
+color=#e5c07b
+
+
+[memory]
+command=~.i3blocks/blocks/memory
+label=  
+interval=30
+#color=#98c379
+COLOR_NORMAL=#EBDBB2
+COLOR_WARN=#FFFC00
+COLOR_CRIT=#FF0000
+
+
+
+[disk]
+command=~/.i3blocks/blocks/disk
+LABEL=		
+#DIR=$HOME
+ALERT_LOW=10
+interval=30
+color=#e06c75
+
+[key_light]
+label=  
+#full_text=⌨ keylight
+command=~/.i3blocks/blocks/key_light
+
+
+
+[temperature]
+command=~/.i3blocks/blocks/temperature
+label=󰏈  
+interval=10
+#T_WARN=70
+#T_CRIT=90
+#SENSOR_CHIP=""
+
+[backlight]
+command=~/.i3blocks/blocks/backlight
+label=󰍹  
+interval=20
+#STEP_SIZE=5
+#USE_SUDO=0
+click_left=lxrandr
+
+[kbdd_layout]
+label=   
+command=~/.i3blocks/blocks/kbdd_layout
+interval=persist
+color=#61afef
+
+[volume]
+command=~/.i3blocks/blocks/volume
+#LABEL=♪ 
+LABEL=   
+interval=once
+signal= 10
+#STEP=5%
+#MIXER=[determined automatically]
+#SCONTROL=[determined automatically]
+#NATURAL_MAPPING=0
+
+[datetime]
+command=date '+%Y-%m-%d %H:%M:%S'
+label=  
+interval=1
