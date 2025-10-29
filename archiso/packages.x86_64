@@ -429,3 +429,6 @@ apparmor
 # backlight
 xorg-xset
 xorg-xbacklight
+
+# key light
+upower
