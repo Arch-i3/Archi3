@@ -426,6 +426,9 @@ dracut
 apparmor
 
 ### i3blocks blocks
+# cpu usage
+sysstat
+
 # backlight
 xorg-xset
 xorg-xbacklight
