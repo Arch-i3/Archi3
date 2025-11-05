@@ -37,46 +37,6 @@ color_good=#98c379
 color_degraded=#e5c07b
 color_bad=#e06c75
 
-# Ethernet
-[ethernet]
-command=~.i3-blocks/blocks/ethernet.sh
-interval=10
-color=#56b6c2
-
-# CPU kihasználtság
-[cpu_usage]
-command=~.i3-blocks/blocks/cpu_usage.sh
-interval=5
-color=#c678dd
-
-# CPU hőmérséklet
-[cpu_temp]
-command=~.i3-blocks/blocks/cpu_temp.sh
-interval=5
-color=#d19a66
-
-#saját
-[cpu_usage]
-command=~/.i3blocks/blocks/cpu_usage
-interval=10
-LABEL=  
-min_width=CPU: 100.00%
-T_WARN=50
-T_CRIT=80
-DECIMALS=2
-#COLOR_NORMAL=#EBDBB2
-COLOR_NORMAL=#FFFFFF
-COLOR_WARN=#FFFC00
-COLOR_CRIT=#FF0000
-
-[wifi]
-command=~/.i3blocks/blocks/wifi
-label=  
-#INTERFACE=wlan0
-interval=60
-click_left=nm-connection-editor
-signal=10
-color=#61afef
 
 [battery]
 command=~/.i3blocks/blocks/battery
@@ -87,40 +47,54 @@ LABEL=
 click_left=mate-power-manager
 color=#e5c07b
 
-
-[memory]
-command=~.i3blocks/blocks/memory
-label=  
-interval=30
-#color=#98c379
-COLOR_NORMAL=#EBDBB2
-COLOR_WARN=#FFFC00
-COLOR_CRIT=#FF0000
-
-
-
-[disk]
-command=~/.i3blocks/blocks/disk
-LABEL=		
-#DIR=$HOME
-ALERT_LOW=10
-interval=30
-color=#e06c75
-
-[key_light]
-label=  
-#full_text=⌨ keylight
-command=~/.i3blocks/blocks/key_light
-
-
+[cpu_usage]
+command=~/.i3blocks/blocks/cpu_usage
+interval=10
+LABEL= 
+min_width=CPU: 100.00%
+T_WARN=50
+T_CRIT=80
+DECIMALS=2
+#COLOR_NORMAL=#EBDBB2
+COLOR_NORMAL=#80dfff
+COLOR_WARN=#ffb347
+COLOR_CRIT=#ff4c4c
 
 [temperature]
 command=~/.i3blocks/blocks/temperature
-label=󰏈  
+label=󰏈 
 interval=10
+color=#FFA500
 #T_WARN=70
 #T_CRIT=90
 #SENSOR_CHIP=""
+
+[memory]
+command=~.i3blocks/blocks/memory
+label=  MEM
+interval=30
+#color=#98c379
+COLOR_NORMAL=#FFFFFF
+COLOR_WARN=#fff68f
+COLOR_CRIT=#ff4c4c
+
+[disk]
+command=~/.i3blocks/blocks/disk
+LABEL=  
+#DIR=$HOME
+ALERT_LOW=10
+interval=30
+#color=#e06c75
+color=#A9A9A9
+
+##--------------------
+# keyboard and backlight
+
+[key_light]
+#label=  
+full_text=   
+Ccommand=~/.i3blocks/blocks/key_light
+
 
 [backlight]
 command=~/.i3blocks/blocks/backlight
@@ -128,13 +102,53 @@ label=󰍹
 interval=20
 #STEP_SIZE=5
 #USE_SUDO=0
-click_left=lxrandr
+click_left=
+
+## -----------------
+# connections
+
+
+[wifi]
+command=~/.i3blocks/blocks/wifi
+label= 
+#INTERFACE=wlan0
+interval=60
+click_left=nm-connection-editor
+signal=10
+color=#80dfff
+
+[ssid]
+command=~/.i3blocks/blocks/ssid
+#INTERFACE=wlan0
+interval=60
+#click_left=nm-connection-editor
+
+[iface]
+command=~/.i3blocks/blocks/iface
+LABEL=󰈀 
+#IFACE=lan0
+#ADDRESS_FAMILY=inet6?
+color=#00CC66
+interval=10
+# set this to 1 to display the name of the connected WIFI interface instead of the IP address.
+display_wifi_name=0
+
+[bluetooth]
+command=~/.i3blocks/blocks/bluetooth
+label=  
+interval=10
 
 [kbdd_layout]
 label=   
 command=~/.i3blocks/blocks/kbdd_layout
 interval=persist
 color=#61afef
+
+[mediaplayer]
+command=~/.i3blocks/blocks/mediaplayer
+instance=mpv
+interval=5
+signal=10
 
 [volume]
 command=~/.i3blocks/blocks/volume
@@ -146,8 +160,46 @@ signal= 10
 #MIXER=[determined automatically]
 #SCONTROL=[determined automatically]
 #NATURAL_MAPPING=0
+color=#FFD700
 
-[datetime]
-command=date '+%Y-%m-%d %H:%M:%S'
-label=  
-interval=1
+#[time]
+#command=~/.i3blocks/blocks/time
+#label=  
+#interval=1
+#TZ_FILE=~/.tz
+#STRFTIME_FORMAT=%Y-%m-%d %H:%M
+#TZONES=$DEFAULT_TZ,Brazil/East,Australia/Brisbane,Asia/Calcutta
+#TZ_LABELS=,Brazil,AU,Hyderabad
+
+[shutdown_menu]
+#full_text=Quit
+# If you are using FontAwesome, we recommend the power-off icon:
+# http://fontawesome.io/icon/power-off/
+#command=~/.i3blocks/blocks/shutdown_menu
+#FG_COLOR=#bbbbbb
+#BG_COLOR=#111111
+#HLFG_COLOR=#111111
+#HLBG_COLOR=#bbbbbb
+#BORDER_COLOR=#222222
+ROFI_TEXT=Menu:
+ROFI_OPTIONS=-width 11 -location 3 -hide-scrollbar -bw 2
+#ZENITY_TITLE=Menu
+#ZENITY_TEXT=Action:
+#ZENITY_OPTIONS=--column= --hide-header
+ENABLE_CONFIRMATIONS=true (must be true or false)
+#LAUNCHER=zenity rofi (must be rofi or zenity)
+#LOCKSCRIPT=i3lock --color=${BG_COLOR#"#"}
+
+
+#[time]
+#command=~/.i3blocks/blocks/weather
+
+[time]
+label= 
+#instance=la
+#TZ=America/Los_Angeles
+command=date +%T
+interval=5
+
+[power]
+command=~/.i3blocks/blocks/power
