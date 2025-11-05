@@ -1,0 +1,18 @@
+#!/bin/bash
+echo "⏻"
+
+case "$BLOCK_BUTTON" in
+    1) rofi -dmenu -p "Művelet" <<EOF | while read -r action; do
+Leállítás
+Újraindítás
+Felfüggesztés
+Kijelentkezés
+EOF
+        case "$action" in
+            "Leállítás") systemctl poweroff ;;
+            "Újraindítás") systemctl reboot ;;
+            "Felfüggesztés") systemctl suspend ;;
+            "Kijelentkezés") loginctl terminate-user "$USER" ;;
+        esac
+    ;;
+esac

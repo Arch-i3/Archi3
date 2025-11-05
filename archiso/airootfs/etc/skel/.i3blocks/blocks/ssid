@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Copyright (C) 2020 hseg <gesh@gesh.uni.cx>
 # Copyright (C) 2014 Alexander Keller <github@nycroth.com>
 
 # This program is free software: you can redistribute it and/or modify
@@ -20,40 +21,19 @@ if [[ -z "$INTERFACE" ]] ; then
 fi
 #------------------------------------------------------------------------
 
-COLOR_GE80=${COLOR_GE80:-#80dfff}
-COLOR_GE60=${COLOR_GE60:-#FFF600}
-COLOR_GE40=${COLOR_GE40:-#FFAE00}
-COLOR_LOWR=${COLOR_LOWR:-#FF0000}
-COLOR_DOWN=${COLOR_DOWN:-#FF0000}
-
 # As per #36 -- It is transparent: e.g. if the machine has no battery or wireless
 # connection (think desktop), the corresponding block should not be displayed.
-[[ ! -d /sys/class/net/${INTERFACE}/wireless ]] && exit
-
-# If the wifi interface exists but no connection is active, "down" shall be displayed.
-if [[ "$(cat /sys/class/net/$INTERFACE/operstate)" = 'down' ]]; then
-    echo "down"
-    echo "down"
-    echo $COLOR_DOWN
-    exit
-fi
+# Similarly, if the wifi interface exists but no connection is active, show
+# nothing
+[[ ! -d /sys/class/net/"${INTERFACE}"/wireless || \
+    "$(cat /sys/class/net/"$INTERFACE"/operstate)" = 'down' ]] && exit
 
 #------------------------------------------------------------------------
 
-QUALITY=$(iw dev ${INTERFACE} link | grep 'dBm$' | grep -Eoe '-[0-9]{2}' | awk '{print  ($1 > -50 ? 100 :($1 < -100 ? 0 : ($1+100)*2))}')
+SSID=$(iw "$INTERFACE" info | awk '/ssid/ {$1=""; print $0}')
 
 #------------------------------------------------------------------------
 
-echo $QUALITY% # full text
-echo $QUALITY% # short text
-
-# color
-if [[ $QUALITY -ge 80 ]]; then
-    echo $COLOR_GE80
-elif [[ $QUALITY -ge 60 ]]; then
-    echo $COLOR_GE60
-elif [[ $QUALITY -ge 40 ]]; then
-    echo $COLOR_GE40
-else
-    echo $COLOR_LOWR
-fi
+echo "$SSID" # full text
+echo "$SSID" # short text
+echo "#80DFFF" # color

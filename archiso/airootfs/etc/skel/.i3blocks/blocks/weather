@@ -1,0 +1,387 @@
+#!/bin/bash
+
+set -x
+
+conf_file="/tmp/i3-weather.conf"
+
+result=
+state=get
+city=1
+unit=0
+now=$(date +"%s")
+last_refresh=-1
+last_result=
+interval=300
+settings="Interval Cities Units Forecast"
+units="°C °F"
+settings_selected_item=0
+settings_items_count=4
+unit_mark=
+
+if [[ -f $conf_file ]]; then
+    for line in $(cat $conf_file); do
+        key=$(echo $line | cut -f1 -d'=')
+        val=$(echo $line | cut -f2 -d'=')
+
+        case $key in
+            state)
+                state=$val
+                ;;
+            last_refresh)
+                last_refresh=$val
+                ;;
+            last_result)
+                last_result=$val
+                ;;
+            city)
+                city=$val
+                ;;
+            unit)
+                unit=$val
+                ;;
+            interval)
+                interval=$val
+                ;;
+            settings_selected_item)
+                settings_selected_item=$val
+                ;;
+            *)
+                ;;
+        esac
+    done
+fi
+
+if [[ $city -gt $# ]]; then
+    city=$#
+fi
+
+if [[ $# -gt 0 ]]; then
+    cities="auto $@"
+else
+    cities="auto"
+fi
+
+#if [[ $last_refresh -ge 0 && $((now - last_refresh)) -ge $interval ]]; then
+#fi
+i=0
+for c in $cities; do
+    if [[ $i -eq $city ]]; then
+        if [[ $c == auto ]]; then
+            #ip=$(curl -Ss https://ipinfo.io/ip)
+            #data=$(curl -Ss http://api.ipstack.com/$ip?access_key=8cbc8cbafe9a1c3fb306f77fd72b5d7a&format=1)
+            #city_name=$(echo $data | jq '.city' | grep -oE '\w+')
+
+            #city_name=$(curl -Ss http://ipinfo.io/json | jq '.city' | grep -oE '\w+')
+            city_name=$(curl -Ss http://ipinfo.io/city | sed 's/ /_/g')
+        else
+            city_name=$c
+        fi
+    fi
+    i=$((i + 1))
+done
+
+if [[ $unit -eq 0 ]]; then
+    unit_mark=m
+else
+    unit_mark=u
+fi
+
+case $BLOCK_BUTTON in
+    1) # Left Click
+        case $state in
+            get)
+                #state=settings:cities
+                #i3-sensible-terminal -e "curl -Ss 'wttr.in/$city_name' && read"
+                terminator --title "Weather $city_name" -e "curl -Ss 'wttr.in/$city_name?$unit_mark'; read -sn 1 -t 10"
+                ;;
+            settings)
+                case $settings_selected_item in
+                    0)
+                        state=settings:interval
+                        ;;
+                    1)
+                        state=settings:cities
+                        ;;
+                    2)
+                        state=settings:units
+                        ;;
+                    3)
+                        terminator --title "Weather $city_name" -e "curl -Ss 'wttr.in/$city_name?$unit_mark'; read -sn 1 -t 10"
+                        state=get
+                        ;;
+                    *)
+                        ;;
+                esac
+                ;;
+            settings:interval)
+                state=get
+                ;;
+            settings:units)
+                state=get
+                last_refresh=-1
+                ;;
+            settings:cities)
+                state=get
+                last_refresh=-1
+                ;;
+            *)
+                ;;
+        esac
+        ;;
+    2) # Middle Click
+        state=get
+        last_refresh=-1
+        ;;
+    3) # Right Click
+        #state=settings
+        case $state in
+            get)
+                settings_selected_item=0
+                state=settings
+                ;;
+            settings)
+                state=get
+                ;;
+            settings:interval)
+                state=settings
+                ;;
+            settings:units)
+                state=settings
+                ;;
+            settings:cities)
+                state=settings
+                ;;
+            settings:metrics)
+                state=settings
+                ;;
+            *)
+                ;;
+        esac
+        #state=cities
+        ;;
+    4) # Wheel Up
+        case $state in
+            settings)
+                settings_selected_item=$(((settings_selected_item + 1) % settings_items_count))
+                ;;
+            settings:interval)
+                interval=$((interval + 15))
+                ;;
+            settings:units)
+                unit=$(((unit + 1) % 2))
+                ;;
+            settings:cities)
+                city=$(((city + 1) % ($# + 1)))
+                ;;
+            *)
+        esac
+        ;;
+    5) # Wheel Down
+        case $state in
+            settings)
+                settings_selected_item=$(((settings_selected_item - 1) % settings_items_count))
+
+                if [[ $settings_selected_item -lt 0 ]]; then
+                    settings_selected_item=$((settings_items_count + settings_selected_item))
+                fi
+                ;;
+            settings:interval)
+                interval=$((interval - 15))
+
+                if [[ $interval -lt 15 ]]; then
+                    interval=15
+                fi
+                ;;
+            settings:units)
+                unit=$(((unit - 1) % 2))
+
+                if [[ $unit -lt 0 ]]; then
+                    unit=$((2 + $unit))
+                fi
+                ;;
+            settings:cities)
+                city=$(((city - 1) % ($# + 1)))
+
+                if [[ $city -lt 0 ]]; then
+                    city=$((1 + $# + $city))
+                fi
+                ;;
+            *)
+                ;;
+        esac
+        ;;
+    6)
+        ;;
+    7)
+        ;;
+    *)
+        ;;
+esac
+
+
+case $state in
+    get)
+        if [[ $last_refresh -ge 0 && $((now - last_refresh)) -ge $interval ]]; then
+            last_refresh=$now
+
+            response=$(curl -Ss en.wttr.in/$city_name?1nT$unit_mark)
+            result_temp=$(printf "%s" "$response" | head -4 | tail -2 | cut -c 16- | xargs echo)
+            result_location=$(printf "%s" "$response" | tail -3 | head -1 | sed -E 's/\w+:\s+([^,]+).*,([^\[]+)\[.*$/\1,\2/')
+
+            #result_name=$(curl -Ss "https://wttr.in" | head -1 | grep -oE '\w+: .*$' | grep -oE '[\w, ]+')
+            #result_temp=$(curl -Ss "https://wttr.in/ $city_name" | head -7 | tail -5 | head -2 | cut -c 16- | xargs echo)
+            #result=$(curl -Ss "https://wttr.in? $city_name" | head -1 | grep -E '\w+, .*$' -o)": "$(curl -Ss "https://wttr.in?0&T&Q $city_name" | cut -c 16- | head -2 | xargs echo)
+            #result="$result_name: $result_temp"
+
+            #result_temp=$(curl -Ss "https://wttr.in/$city_name?0&T&Q" | cut -c 16- | head -2 | xargs echo)
+            if [[ -z $result_temp || -n $(echo $response | grep -i "bad gateway") ]]; then
+                result="Service unavailable"
+                last_result=$result
+            else
+                #result_location=$(curl -Ss "https://wttr.in/$city_name" | tail -3 | head -1)
+                #if [[ -n $(echo $result_location | grep -io "location:") ]]; then
+                #    result_location=${result_location#*: }
+                #    result_location=${result_location% [*}
+                #    result_location="${result_location%%,*}, ${result_location##*,}"
+                #else
+                #    result_location=
+                #fi
+
+                result_status=
+
+                cond=$(echo $result_temp | grep -ioE 'partly')$(echo $result_temp | grep -ioE 'cloud')$(echo $result_temp | grep -ioE 'rain')$(echo $result_temp | grep -ioE 'snow')$(echo $result_temp | grep -ioE 'sun|clear')$(echo $result_temp | grep -ioE 'sand')
+                cond=$(echo $cond | tr '[:upper:]' '[:lower:]')
+
+                case $cond in
+                    storm)
+                        result_status=🌪
+                        ;;
+                    sand)
+                        result_status=🌫
+                        ;;
+                    partlycloud)
+                        result_status=🌤
+                        ;;
+                    cloud)
+                        #result_status=
+                        result_status=☁
+                        ;;
+                    rain)
+                        #result_status=
+                        result_status=🌧
+                        ;;
+                    snow)
+                        #result_status=
+                        result_status=🌨
+                        ;;
+                    sun)
+                        #result_status=
+                        result_status=☀
+                        ;;
+                    clear)
+                        #result_status=
+                        result_status=☀
+                        ;;
+                    *)
+                        ;;
+                esac
+
+                #result_location=$(echo $result_resp | grep -iE 'location: [a-z ]+')
+                #result_location=${result_location#* }
+                #result_location=${result_location% *}
+
+                #result_temp=$(echo $result_resp)
+                #result_temp=${result_resp#*/}
+                #result_temp=${result_resp%%°C*}
+                #result_temp=
+
+                result="$result_status $result_temp - $result_location"
+                last_result=$result
+            fi
+
+            #result_weather=$(ansiweather -a false -w false -h false -p false -d false -s false -l $city_name)
+            #result=$(echo $result_weather | cut -c 12- | sed 's/ => /: /')
+        fi
+        ;;
+    settings)
+        result="Settings: "
+        i=0
+        for item in $settings; do
+            if [[ $i -eq $settings_selected_item ]]; then
+                result="$result $item"
+            else
+                result="$result $item"
+            fi
+            i=$((i + 1))
+        done
+        ;;
+    settings:interval)
+        interval_h=$((interval / 3600))
+        interval_m=$(((interval - (interval_h * 3600)) / 60))
+        interval_s=$((interval - (interval_h * 3600) - (interval_m * 60)))
+        result="Interval: "
+
+        if [[ $interval_h -gt 0 ]]; then
+            result="$result$interval_h:"
+        fi
+        if [[ $interval_m -gt 0 ]]; then
+            result="$result$interval_m':"
+        elif [[ $interval_h -gt 0 ]]; then
+            result=$result"0':"
+        fi
+        result="$result$interval_s\""
+        ;;
+    settings:units)
+        result="Units: "
+        i=0
+        for u in $units; do
+            if [[ $i == $unit ]]; then
+                result="$result $u"
+            else
+                result="$result $u"
+            fi
+            i=$((i + 1))
+        done
+        ;;
+    settings:cities)
+        result="Cities: "
+        i=0
+        for c in $cities; do
+            if [[ $i == $city ]]; then
+                result="$result $c"
+            else
+                result="$result $c"
+            fi
+            i=$((i + 1))
+        done
+        ;;
+    *)
+        ;;
+esac
+
+if [[ -z $result ]]; then
+    #result=Weather
+    result=$(echo $last_result | sed 's/_/ /g')
+fi
+
+if [[ last_refresh -lt 0 ]]; then
+    last_refresh=0
+    result="Please Wait... Fetching Data"
+    last_result=$result
+fi
+
+echo "state=$state" > $conf_file
+echo "city=$city" >> $conf_file
+echo "unit=$unit" >> $conf_file
+echo "interval=$interval" >> $conf_file
+echo "settings_selected_item=$settings_selected_item" >> $conf_file
+echo "last_refresh=$last_refresh" >> $conf_file
+echo "last_result=$last_result" | sed 's/ /_/g' >> $conf_file
+
+#if read -t .01 input; then
+#    result="HI"$BLOCK_BUTTON$input
+#fi
+
+echo -e $result
+#echo "$cities : $city/$(($# + 1)) , $state" >> ~/i3-weather.log
+
