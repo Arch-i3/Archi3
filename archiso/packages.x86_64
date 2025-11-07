@@ -426,6 +426,7 @@ dracut
 apparmor
 
 ### i3blocks blocks
+ttf-jetbrains-mono-nerd 
 # cpu usage
 sysstat
 
