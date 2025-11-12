@@ -41,24 +41,24 @@ color_bad=#e06c75
 [battery]
 command=~/.i3blocks/blocks/battery
 interval=30
-LABEL=  
+LABEL= 
 #LABEL=⚡
 #BAT_NUMBER=0
-click_left=mate-power-manager
-color=#e5c07b
+#click_left=mate-power-manager
+#color=#e5c07b
 
 [cpu_usage]
 command=~/.i3blocks/blocks/cpu_usage
 interval=10
-LABEL= 
-min_width=CPU: 100.00%
-T_WARN=50
-T_CRIT=80
-DECIMALS=2
+LABEL=
+#min_width=CPU: 100.00%
+#T_WARN=50
+#T_CRIT=80
+#DECIMALS=2
 #COLOR_NORMAL=#EBDBB2
-COLOR_NORMAL=#80dfff
-COLOR_WARN=#ffb347
-COLOR_CRIT=#ff4c4c
+#COLOR_NORMAL=#80dfff
+#COLOR_WARN=#ffb347
+#COLOR_CRIT=#ff4c4c
 
 [temperature]
 command=~/.i3blocks/blocks/temperature
@@ -195,7 +195,7 @@ ENABLE_CONFIRMATIONS=true (must be true or false)
 #command=~/.i3blocks/blocks/weather
 
 [time]
-label= 
+label=  
 #instance=la
 #TZ=America/Los_Angeles
 command=date +%T
