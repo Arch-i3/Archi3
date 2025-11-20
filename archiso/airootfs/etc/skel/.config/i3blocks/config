@@ -39,7 +39,7 @@ color_bad=#e06c75
 
 
 [battery]
-command=~/.i3blocks/blocks/battery
+command=~/.i3blocks/blocks/battery;  if [ "$button" -eq 3 ]; then mate-power-preferences; fi
 interval=30
 LABEL= 
 #LABEL=⚡
@@ -48,7 +48,8 @@ LABEL=
 #color=#e5c07b
 
 [cpu_usage]
-command=~/.i3blocks/blocks/cpu_usage
+command=~/.i3blocks/blocks/cpu_usage; if [ "$button" -eq 1 ]; then lxtask; fi
+
 interval=10
 LABEL=
 #min_width=CPU: 100.00%
@@ -69,14 +70,33 @@ color=#FFA500
 #T_CRIT=90
 #SENSOR_CHIP=""
 
+[memory_free]
+label= 
+command=free -h | awk 'NR==2{printf "%s", $7}'
+# A '$4' az aktuálisan szabad memória. Vagy használhatod a '$7'-et a 
+# 'free' parancs újabb verzióiban a 'available' (rendelkezésre álló) értékhez.
+interval=5
+
+
 [memory]
-command=~.i3blocks/blocks/memory
-label=  MEM
-interval=30
+#command=~.i3blocks/blocks/memory
+#label=MEM
+#interval=30
+#color=#FFFFFF
+#[memory] 
+#command=$SCRIPT_DIR/memory 
+#label=SWAP 
+#instance=swap 
+#interval=30
+
+[memory]
+#command=~.i3blocks/blocks/memory
+#label=  MEM
+#interval=30
 #color=#98c379
-COLOR_NORMAL=#FFFFFF
-COLOR_WARN=#fff68f
-COLOR_CRIT=#ff4c4c
+#COLOR_NORMAL=#FFFFFF
+#COLOR_WARN=#fff68f
+#COLOR_CRIT=#ff4c4c
 
 [disk]
 command=~/.i3blocks/blocks/disk
@@ -93,12 +113,11 @@ color=#A9A9A9
 [key_light]
 #label=  
 full_text=   
-Ccommand=~/.i3blocks/blocks/key_light
-
+Ccommand=~/.i3blocks/blocks/key_light; if [ "$BLOCK_BUTTON" == "1" ]; then darkman toggle; fi
 
 [backlight]
-command=~/.i3blocks/blocks/backlight
-label=󰍹  
+command=~/.i3blocks/blocks/backlight; if [ "$button" -eq 1 ]; then lxrandr; fi
+label=󰍹
 interval=20
 #STEP_SIZE=5
 #USE_SUDO=0
@@ -109,8 +128,10 @@ click_left=
 
 
 [wifi]
-command=~/.i3blocks/blocks/wifi
+command=~/.i3blocks/blocks/wifi; if [ "$button" -eq 3 ]; then nm-connection-editor; fi
 label= 
+#label=📶
+interval=5
 #INTERFACE=wlan0
 interval=60
 click_left=nm-connection-editor
@@ -118,7 +139,10 @@ signal=10
 color=#80dfff
 
 [ssid]
-command=~/.i3blocks/blocks/ssid
+#command=~/.i3blocks/blocks/ssid
+#[wifi]
+command=~/.i3blocks/blocks/ssid; if [ "$button" -eq 1 ]; then nm-applet --toggle; fi
+lebel=SSIS
 #INTERFACE=wlan0
 interval=60
 #click_left=nm-connection-editor
