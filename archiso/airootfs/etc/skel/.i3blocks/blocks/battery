@@ -46,7 +46,7 @@ $full_text = "$label$percent%";
 if ($status eq 'Discharging') {
 	$full_text .= ' DIS';
 } elsif ($status eq 'Charging') {
-	$full_text .= '   ';
+	$full_text .= ' CHR';
 } elsif ($status eq 'Unknown') {
 	open (AC_ADAPTER, "acpi -a |") or die;
 	$ac_adapt = <AC_ADAPTER>;
@@ -79,11 +79,11 @@ if ($status eq 'Discharging') {
 	if ($percent < 20) {
 		print "#FF0000\n";
 	} elsif ($percent < 40) {
-		print "#00FF00\n";
+		print "#FFAE00\n";
 	} elsif ($percent < 60) {
-		print "#00FF00\n";
+		print "#FFF600\n";
 	} elsif ($percent < 85) {
-		print "#FFFF00\n";
+		print "#A8FF00\n";
 	}
 
 	if ($percent < 5) {
