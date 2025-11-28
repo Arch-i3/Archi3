@@ -40,8 +40,8 @@ color_bad=#e06c75
 
 [battery]
 command=~/.i3blocks/blocks/battery;  if [ "$button" -eq 3 ]; then mate-power-preferences; fi
-interval=30
-LABEL= 
+#background=EEEEEE#interval=30
+#LABEL=
 #LABEL=⚡
 #BAT_NUMBER=0
 #click_left=mate-power-manager
@@ -49,7 +49,6 @@ LABEL=
 
 [cpu_usage]
 command=~/.i3blocks/blocks/cpu_usage; if [ "$button" -eq 1 ]; then lxtask; fi
-
 interval=10
 LABEL=
 #min_width=CPU: 100.00%
@@ -63,24 +62,24 @@ LABEL=
 
 [temperature]
 command=~/.i3blocks/blocks/temperature
-label=󰏈 
+label=󰏈  
 interval=10
 color=#FFA500
 #T_WARN=70
 #T_CRIT=90
 #SENSOR_CHIP=""
 
-[memory_free]
-label= 
-command=free -h | awk 'NR==2{printf "%s", $7}'
+#[memory_free]
+#label= 
+#command=free -h | awk 'NR==2{printf "%s", $7}'
 # A '$4' az aktuálisan szabad memória. Vagy használhatod a '$7'-et a 
 # 'free' parancs újabb verzióiban a 'available' (rendelkezésre álló) értékhez.
-interval=5
+#interval=5
 
 
 [memory]
-#command=~.i3blocks/blocks/memory
-#label=MEM
+command=~/.i3blocks/blocks/memory
+#label= nf-fa-memory
 #interval=30
 #color=#FFFFFF
 #[memory] 
@@ -89,7 +88,7 @@ interval=5
 #instance=swap 
 #interval=30
 
-[memory]
+#[memory]
 #command=~.i3blocks/blocks/memory
 #label=  MEM
 #interval=30
@@ -117,34 +116,42 @@ Ccommand=~/.i3blocks/blocks/key_light; if [ "$BLOCK_BUTTON" == "1" ]; then darkm
 
 [backlight]
 command=~/.i3blocks/blocks/backlight; if [ "$button" -eq 1 ]; then lxrandr; fi
-label=󰍹
+label=󰍹  
 interval=20
 #STEP_SIZE=5
 #USE_SUDO=0
-click_left=
+#click_left=
+
+
+[kbdd_layout]
+label=   
+command=~/.i3blocks/blocks/kbdd_layout
+interval=persist
+color=#61afef
+
 
 ## -----------------
 # connections
 
 
 [wifi]
-command=~/.i3blocks/blocks/wifi; if [ "$button" -eq 3 ]; then nm-connection-editor; fi
-label= 
+command=~/.i3blocks/blocks/wifi #; if [ "$button" -eq 3 ]; then nm-connection-editor; fi
+#label= 
 #label=📶
-interval=5
+#interval=5
 #INTERFACE=wlan0
-interval=60
-click_left=nm-connection-editor
-signal=10
-color=#80dfff
+#interval=60
+#click_left=nm-connection-editor
+#signal=10
+#color=#80dfff
 
-[ssid]
+#[ssid]
 #command=~/.i3blocks/blocks/ssid
 #[wifi]
-command=~/.i3blocks/blocks/ssid; if [ "$button" -eq 1 ]; then nm-applet --toggle; fi
-lebel=SSIS
+#command=~/.i3blocks/blocks/ssid; if [ "$button" -eq 1 ]; then nm-applet --toggle; fi
+#lebel=SSIS
 #INTERFACE=wlan0
-interval=60
+#interval=60
 #click_left=nm-connection-editor
 
 [iface]
@@ -157,19 +164,23 @@ interval=10
 # set this to 1 to display the name of the connected WIFI interface instead of the IP address.
 display_wifi_name=0
 
+#[bluetooth]
+#command=~/.i3blocks/blocks/bluetooth
+#label=  
+#interval=10
+
 [bluetooth]
 command=~/.i3blocks/blocks/bluetooth
-label=  
-interval=10
+lebel=  
+color=#00aaff
+interval=1
+signal=10 ; Ez a signal a parancs frissítését segíti (pl. ha külsőleg változik az állapot)
+# Fontos: Ha a parancshoz más elérési utat használ, azt módosítsa a `command=` sorban.
 
-[kbdd_layout]
-label=   
-command=~/.i3blocks/blocks/kbdd_layout
-interval=persist
-color=#61afef
 
 [mediaplayer]
 command=~/.i3blocks/blocks/mediaplayer
+label= 
 instance=mpv
 interval=5
 signal=10
@@ -219,11 +230,13 @@ ENABLE_CONFIRMATIONS=true (must be true or false)
 #command=~/.i3blocks/blocks/weather
 
 [time]
+command=~/.i3blocks/blocks/time
 label=  
+color=#FFFFFF
 #instance=la
 #TZ=America/Los_Angeles
-command=date +%T
-interval=5
+#command=date +%T
+#interval=5
 
 [power]
 command=~/.i3blocks/blocks/power
