@@ -1,20 +1,36 @@
 #!/bin/bash
 
-# Left click
-if [[ "${BLOCK_BUTTON}" -eq 1 ]]; then
-  sudo bluetooth on
-# Middle click
-elif [[ "${BLOCK_BUTTON}" -eq 2 ]]; then
-  sudo bluetooth toggle
-# Right click
-elif [[ "${BLOCK_BUTTON}" -eq 3 ]]; then
-  sudo bluetooth off
+STATUS=$(bluetoothctl show | grep "Powered:" | awk '{print $2}')
+
+if [ "$STATUS" == "yes" ]; then
+    echo " ON"
+    echo " ON"
+    echo "#00aaff"
+else
+    echo " OFF"
+    echo " OFF"
+#    echo "#FF4500"
+    echo "#00aaff"
+
+    
 fi
 
-STATUS=$(bluetooth | grep -wo 'on')
-
-if [[ "${STATUS}" = "on" ]]; then
-  echo "on"
-  echo "on"
-  echo ""
-fi
+# Kattintás kezelése
+case "$BLOCK_BUTTON" in
+    1)  # Bal kattintás: Bluetooth be/ki kapcsolása
+        if [ "$STATUS" == "yes" ]; then
+            bluetoothctl power off
+            notify-send "Bluetooth" "Bluetooth kikapcsolva"
+        else
+            bluetoothctl power on
+            notify-send "Bluetooth" "Bluetooth bekapcsolva"
+        fi
+        ;;
+    3)  # Jobb kattintás: Blueman Manager indítása
+        if command -v blueman-manager &> /dev/null; then
+            blueman-manager &
+        else
+            notify-send "Bluetooth Hiba" "A Blueman Manager nincs telepítve vagy nem található."
+        fi
+        ;;
+esac
