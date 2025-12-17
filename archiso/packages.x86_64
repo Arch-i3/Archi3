@@ -182,7 +182,7 @@ yaml-cpp
 python-pyaml
 python-unidecode
 doxygen
-#hwinfo
+hwinfo
 squashfs-tools
 
 ## Network
@@ -249,7 +249,8 @@ xf86-input-libinput
 #noto-fonts-emoji
 #noto-fonts-cjk
 ttf-roboto
-ttf-jetbrains-mono-nerd 
+#ttf-jetbrains-mono-nerd 
+#ttf-roboto-mono-nerd
 
 # Theme
 #adwaita-icon-theme
@@ -305,7 +306,7 @@ qutebrowser
 # File manager
 pcmanfm
 webp-pixbuf-loader-git
-#hwinfo
+hwinfo
 
 # Randr
 lxrandr
@@ -418,17 +419,16 @@ mate-desktop
 # Control center
 mate-control-center
 
-# Calamares rebuilding
 boost-libs
-
 dracut
 #wayland
 
 ## MAC
 apparmor
 
-### i3blocks blocks
-ttf-jetbrains-mono-nerd 
+### i3blocks blocks 
+#ttf-roboto-mono-nerd 
+ttf-nerd-fonts-symbols
 # cpu usage
 sysstat
 
@@ -440,5 +440,5 @@ xorg-xbacklight
 upower
 
 # temperature
-lm-sensors
-
+#lm-sensors
+#i2c-tools 
