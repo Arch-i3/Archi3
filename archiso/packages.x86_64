@@ -182,7 +182,7 @@ yaml-cpp
 python-pyaml
 python-unidecode
 doxygen
-hwinfo
+#hwinfo
 squashfs-tools
 
 ## Network
@@ -305,7 +305,7 @@ qutebrowser
 # File manager
 pcmanfm
 webp-pixbuf-loader-git
-hwinfo
+#hwinfo
 
 # Randr
 lxrandr
