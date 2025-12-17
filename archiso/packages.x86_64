@@ -419,7 +419,9 @@ mate-desktop
 # Control center
 mate-control-center
 
+# Calamares rebuild
 boost-libs
+
 dracut
 #wayland
 
