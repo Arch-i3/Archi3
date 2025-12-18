@@ -168,6 +168,7 @@ xorg-xkill
 xterm
 xorg-xrdb
 mkinitcpio-openswap
+xcb-util-cursor 
 
 # Calamares
 mkinitcpio-openswap
