@@ -1,0 +1,65 @@
+# Archi3 GRUB Theme
+# Matching Plymouth Archi3 & i3wm config
+
+# Globális beállítások
+title-text: ""
+desktop-image: "background.png"
+desktop-color: "#000000"
+terminal-font: "Terminus Regular 14"
+terminal-box: "terminal_box_*.png"
+
+# Progress bar (visszaszámláló) stílusa
++ progress_bar {
+    id = "__timeout__"
+    left = 15%
+    width = 70%
+    top = 85%
+    height = 2
+    text = ""
+    value_color = "#285577"    # Az i3 kék színed
+    bg_color = "#333333"       # Az i3 inaktív színed
+    border_color = "#000000"
+}
+
+# Boot menü stílusa
++ boot_menu {
+    left = 15%
+    width = 70%
+    top = 30%
+    height = 40%
+    item_font = "Roboto Regular 16"
+    item_color = "#cccccc"             # Enyhén szürke a nem aktív elemeknek
+    selected_item_color = "#ffffff"    # Fehér az aktívnak
+    item_height = 26
+    item_spacing = 4
+    
+    # Itt használjuk az i3 "focused_workspace" színkódját a háttérhez
+    selected_item_pixmap_style = "select_*.png" 
+    
+    # Ha nincs képed a kijelöléshez, használhatsz tiszta színt is, 
+    # de a GRUB jobban szereti a "pixmap"-et. 
+    # Egyszerűbb megoldás: Csak a szövegszínt változtatjuk (fentebb beállítva), 
+    # de ha "csíkot" akarsz, kép kell hozzá. Lásd lejjebb a megjegyzést.
+}
+
+# Opcionális: Arch logó vagy felirat a menü felett
++ label {
+    top = 10%
+    left = 0
+    width = 100%
+    text = "Arch Linux"
+    align = "center"
+    font = "Roboto Regular 16"
+    color = "#285577"
+}
+
+# Billentyűzet tippek alul
++ label {
+    top = 75%
+    left = 0
+    width = 100%
+    text = "Enter: Boot   E: Edit   C: Console"
+    align = "center"
+    font = "Roboto Regular 14"
+    color = "#5f676a"
+}
