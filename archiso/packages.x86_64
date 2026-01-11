@@ -299,61 +299,61 @@ i3
 feh
 
 # Notification
-dunst
+#dunst
 
 # Browser
-qutebrowser
+#qutebrowser
 
 # File manager
-pcmanfm
-webp-pixbuf-loader-git
-hwinfo
+#pcmanfm
+#webp-pixbuf-loader-git
+#hwinfo
 
 # Randr
-lxrandr
+#lxrandr
 
 # Task manager
-lxtask
+#lxtask
 
 # Picture viewer
-viewnior
-libavif
-libheif
+#viewnior
+#libavif
+#libheif
 
 # Terminal emulator
-alacritty
+#alacritty
 
 # Dynamic menu
 dmenu
 
 # Text editor
-geany
+#geany
 
 # Media Player
-mpv
+#mpv
 
 # Bluetooth managrt
-blueman
-bluez
-bluez-cups
-bluez-deprecated-tools
-bluez-hid2hci
-bluez-mesh
-bluez-tools
-bluez-utils
+#blueman
+#bluez
+#bluez-cups
+#bluez-deprecated-tools
+#bluez-hid2hci
+#bluez-mesh
+#bluez-tools
+#bluez-utils
 
 # GUI Packege Manager
 #pamac-flatpak
-pamac-gtk3
+#pamac-gtk3
 #libpamac-flatpak
 #intltool
-appstream-glib
-libpamac-aur
-meson
+#appstream-glib
+#libpamac-aur
+#meson
 
 # Screenshots
-imagemagick
-maim
+#imagemagick
+#maim
 
 #gnome-software
 #libglib-testing
@@ -369,79 +369,63 @@ maim
 #glib2-devel
 
 
-picom
-vala
-gobject-introspection
-asciidoc
-itstool
-flatpak
-xdg-desktop-portal
-xdg-desktop-portal-gtk
-xdg-desktop-portal-gnome
+#picom
+#vala
+#gobject-introspection
+#asciidoc
+#itstool
+#flatpak
+#xdg-desktop-portal
+#xdg-desktop-portal-gtk
+#xdg-desktop-portal-gnome
 
 # Polkit
-polkit-gnome
+#polkit-gnome
 
 # timeshift
 #grub-btrfs
 #timeshift-autosnap
-git
+#git
 
 ## Build packages
-fakeroot
-boost
-extra-cmake-modules
-ninja
-qt6-tools
-debugedit
-archiso
+#fakeroot
+#boost
+#extra-cmake-modules
+#ninja
+#qt6-tools
+#debugedit
+#archiso
 
 ## Files
-gvfs
-gvfs-mtp
-gvfs-afc
-gvfs-gphoto2
-gvfs-smb
-gvfs-google
-highlight
-trash-cli
-ueberzug
-xdg-user-dirs
-xdg-user-dirs-gtk
+#gvfs
+#gvfs-mtp
+#gvfs-afc
+#gvfs-gphoto2
+#gvfs-smb
+#gvfs-google
+#highlight
+#trash-cli
+#ueberzug
+#xdg-user-dirs
+#xdg-user-dirs-gtk
 
 # Print
-system-config-printer
-gsfonts
+#system-config-printer
+#gsfonts
 
 ### Power
-mate-power-manager
-mate-desktop
+#mate-power-manager
+#mate-desktop
 
 # Control center
-mate-control-center
+#mate-control-center
 
 # Calamares rebuild
-boost-libs
+#boost-libs
 
-dracut
+#dracut
 #wayland
 
 ## MAC
-apparmor
+#apparmor
 
-### i3blocks blocks 
-#ttf-roboto-mono-nerd 
-ttf-nerd-fonts-symbols
-# cpu usage
-sysstat
-
-# backlight
-xorg-xset
-xorg-xbacklight
-
-# key light
-upower
-
-# temperature
-#lm-sensors
-#i2c-tools 
