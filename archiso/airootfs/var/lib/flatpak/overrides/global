@@ -1,6 +1,0 @@
-#[Context]
-#filesystems=/home/kakuk/.themes;
-
-[Environment]
-GTK_THEME=Materia
-ICON_THEME=Papirus
