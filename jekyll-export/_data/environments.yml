@@ -1,0 +1,404 @@
+# Desktop Environments
+- id: gnome
+  name: GNOME
+  category: desktop-environment
+  description: "Modern, letisztult asztali kornyezet, amely az egyszerusegre es a hatekonysagra osszpontosit. Az Activities (Tevekenysegek) nezet segitsegevel kezelheted az ablakokat es indíthatod az alkalmazasokat."
+  website: https://www.gnome.org/
+  logo: /assets/images/gnome-logo.jpg
+  screenshot: /assets/images/gnome-screenshot.jpg
+  tilingType: stacking
+  displayServer: wayland
+  features:
+    - Activities Overview
+    - Dynamic Workspaces
+    - Extensions Support
+    - Touch Gestures
+    - Night Light
+    - Integrated Search
+  resourceUsage: heavy
+  customization: low
+  beginnerFriendly: true
+  memoryUsageMB: 800
+  cpuUsagePercent: 3.5
+  diskSpaceMB: 2800
+
+- id: kde-plasma
+  name: KDE Plasma
+  category: desktop-environment
+  description: "Rendkivul testreszabhato asztali kornyezet hagyomanyos elrendezessel. Kivalo Wayland-tamogatas HDR es szinkezelessel. A widgetek es a KDE Connect segitsegevel telefonodat is osszekötheted a gepeddel."
+  website: https://kde.org/plasma-desktop/
+  logo: /assets/images/kde-plasma-logo.jpg
+  screenshot: /assets/images/kde-plasma-screenshot.jpg
+  tilingType: stacking
+  displayServer: both
+  features:
+    - Highly Customizable
+    - KDE Connect
+    - Activities
+    - Widgets
+    - HDR Support
+    - Window Tiling
+  resourceUsage: moderate
+  customization: high
+  beginnerFriendly: true
+  memoryUsageMB: 620
+  cpuUsagePercent: 2.8
+  diskSpaceMB: 2200
+
+- id: xfce
+  name: Xfce
+  category: desktop-environment
+  description: "Konnyusulyu, modularis asztali kornyezet. Gyors, alacsony eroforras-igenyu, es koveti a Unix filozofiat. Idealis regebbi hardverhez."
+  website: https://xfce.org/
+  logo: /assets/images/xfce-logo.jpg
+  screenshot: /assets/images/xfce-screenshot.jpg
+  tilingType: stacking
+  displayServer: x11
+  features:
+    - Modular Design
+    - Panel System
+    - Thunar File Manager
+    - Low Resource Usage
+  resourceUsage: lightweight
+  customization: medium
+  beginnerFriendly: true
+  memoryUsageMB: 380
+  cpuUsagePercent: 1.2
+  diskSpaceMB: 420
+
+- id: cinnamon
+  name: Cinnamon
+  category: desktop-environment
+  description: "Hagyomanyos asztali elmeny modern funkciokkal. A Linux Mint alapertelmezett kornyezete. Windows-rol erkezoknek ismeros lehet."
+  website: https://github.com/linuxmint/cinnamon
+  logo: /assets/images/cinnamon-logo.jpg
+  screenshot: /assets/images/cinnamon-screenshot.jpg
+  tilingType: stacking
+  displayServer: x11
+  features:
+    - Spices System
+    - Hot Corners
+    - Expo View
+    - Traditional Layout
+  resourceUsage: moderate
+  customization: high
+  beginnerFriendly: true
+  memoryUsageMB: 520
+  cpuUsagePercent: 2.2
+  diskSpaceMB: 850
+
+- id: mate
+  name: MATE
+  category: desktop-environment
+  description: "A GNOME 2 folytatasa. Klasszikus asztali kornyezet, amely modern, konnyu es hagyomanyos elmenyt nyujt."
+  website: https://mate-desktop.org/
+  logo: /assets/images/mate-logo.jpg
+  screenshot: /assets/images/mate-screenshot.jpg
+  tilingType: stacking
+  displayServer: x11
+  features:
+    - Traditional Layout
+    - Caja File Manager
+    - Low Resource Usage
+  resourceUsage: lightweight
+  customization: medium
+  beginnerFriendly: true
+  memoryUsageMB: 350
+  cpuUsagePercent: 1.0
+  diskSpaceMB: 380
+
+- id: lxde
+  name: LXDE
+  category: desktop-environment
+  description: "Rendkivul konnyu asztali kornyezet regi hardverhez. Modularis komponensek minimalis eroforras-igennyel."
+  website: https://lxde.org/
+  logo: /assets/images/lxde-logo.jpg
+  screenshot: /assets/images/lxde-screenshot.jpg
+  tilingType: stacking
+  displayServer: x11
+  features:
+    - Ultra Lightweight
+    - PCManFM
+    - Openbox WM
+    - Fast Startup
+  resourceUsage: lightweight
+  customization: medium
+  beginnerFriendly: true
+  memoryUsageMB: 180
+  cpuUsagePercent: 0.5
+  diskSpaceMB: 150
+
+- id: lxqt
+  name: LXQt
+  category: desktop-environment
+  description: "Qt-alapu konnyu asztali kornyezet, az LXDE utodja. Modern Qt eszkozvalasztekkal, mikozben megörzi az alacsony eroforras-igenyt."
+  website: https://lxqt-project.org/
+  logo: /assets/images/lxqt-logo.jpg
+  screenshot: /assets/images/lxqt-screenshot.jpg
+  tilingType: stacking
+  displayServer: both
+  features:
+    - Lightweight Qt
+    - PCManFM-Qt
+    - Wayland Support
+    - Modern Look
+  resourceUsage: lightweight
+  customization: medium
+  beginnerFriendly: true
+  memoryUsageMB: 280
+  cpuUsagePercent: 0.8
+  diskSpaceMB: 320
+
+- id: budgie
+  name: Budgie
+  category: desktop-environment
+  description: "Modern, elegans asztali kornyezet, eredetileg a Solus projektbol. Az egyszerusegre fokuszal egypaneles elrendezessel es a Raven oldalsavval."
+  website: https://buddiesofbudgie.org/
+  logo: /assets/images/budgie-logo.jpg
+  screenshot: /assets/images/budgie-screenshot.jpg
+  tilingType: stacking
+  displayServer: x11
+  features:
+    - Raven Sidebar
+    - Elegant Design
+    - Panel Applets
+    - Clean UI
+  resourceUsage: moderate
+  customization: medium
+  beginnerFriendly: true
+  memoryUsageMB: 560
+  cpuUsagePercent: 2.5
+  diskSpaceMB: 750
+
+# Window Managers
+- id: i3
+  name: i3
+  category: window-manager
+  description: "Csempezo ablakkezelo X11-hez. Billentyuzet-vezérelt, fa-alapu elrendezessel. A tiling WM-ek egyik legnepszerubb kepviseloje."
+  website: https://i3wm.org/
+  logo: /assets/images/i3-logo.jpg
+  screenshot: /assets/images/i3-screenshot.jpg
+  tilingType: tiling
+  displayServer: x11
+  features:
+    - Tree-based Layout
+    - Keyboard Driven
+    - IPC Interface
+    - Multi-monitor
+    - Plain Text Config
+  resourceUsage: lightweight
+  customization: high
+  beginnerFriendly: false
+  memoryUsageMB: 30
+  cpuUsagePercent: 0.1
+  diskSpaceMB: 8
+
+- id: sway
+  name: Sway
+  category: window-manager
+  description: "i3-kompatibilis Wayland kompozitor. Az i3 drop-in helyettesitoje, a meglevo i3 konfiguracio hasznalatával."
+  website: https://swaywm.org/
+  logo: /assets/images/sway-logo.jpg
+  screenshot: /assets/images/sway-screenshot.jpg
+  tilingType: tiling
+  displayServer: wayland
+  features:
+    - i3 Compatible
+    - Wayland Native
+    - wlroots Based
+    - Security Focused
+  resourceUsage: lightweight
+  customization: high
+  beginnerFriendly: false
+  memoryUsageMB: 45
+  cpuUsagePercent: 0.2
+  diskSpaceMB: 12
+
+- id: hyprland
+  name: Hyprland
+  category: window-manager
+  description: "Dinamikus csempezo Wayland kompozitor sima animaciokkal. Modern funkciok plugin-tamogatassal es elo konfiguracio-ujratoltessel."
+  website: https://hyprland.org/
+  logo: /assets/images/hyprland-logo.jpg
+  screenshot: /assets/images/hyprland-screenshot.jpg
+  tilingType: dynamic
+  displayServer: wayland
+  features:
+    - Smooth Animations
+    - Dynamic Tiling
+    - Live Config Reload
+    - Plugin System
+  resourceUsage: lightweight
+  customization: high
+  beginnerFriendly: false
+  memoryUsageMB: 70
+  cpuUsagePercent: 0.5
+  diskSpaceMB: 25
+
+- id: bspwm
+  name: bspwm
+  category: window-manager
+  description: "Binaris ter-feloszto ablakkezelo. A bspc kliensen keresztul vezérelheto. Minimalis es szabaly-alapu mukodes."
+  website: https://github.com/baskerville/bspwm
+  logo: /assets/images/bspwm-logo.jpg
+  screenshot: /assets/images/bspwm-screenshot.jpg
+  tilingType: tiling
+  displayServer: x11
+  features:
+    - Binary Partitioning
+    - bspc Client
+    - Shell Scriptable
+    - Rule-based
+  resourceUsage: lightweight
+  customization: high
+  beginnerFriendly: false
+  memoryUsageMB: 25
+  cpuUsagePercent: 0.1
+  diskSpaceMB: 5
+
+- id: awesome
+  name: Awesome
+  category: window-manager
+  description: "Rendkivul konfiguralhato dinamikus csempezo WM. Lua szkripteles a teljes testreszabashoz."
+  website: https://awesomewm.org/
+  logo: /assets/images/awesome-logo.jpg
+  screenshot: /assets/images/awesome-screenshot.jpg
+  tilingType: dynamic
+  displayServer: x11
+  features:
+    - Lua Configurable
+    - Built-in Notifications
+    - Extensible API
+    - Themes
+  resourceUsage: lightweight
+  customization: high
+  beginnerFriendly: false
+  memoryUsageMB: 40
+  cpuUsagePercent: 0.2
+  diskSpaceMB: 15
+
+- id: dwm
+  name: dwm
+  category: window-manager
+  description: "A suckless projekt dinamikus ablakkezeloje. A konfiguracio a forraskod szerkesztesevel törtenik. Minimalis, kb. 2000 sor C kod."
+  website: https://dwm.suckless.org/
+  logo: /assets/images/dwm-logo.jpg
+  screenshot: /assets/images/dwm-screenshot.jpg
+  tilingType: dynamic
+  displayServer: x11
+  features:
+    - Minimal Code
+    - Patch System
+    - Source Config
+    - Fast
+  resourceUsage: lightweight
+  customization: high
+  beginnerFriendly: false
+  memoryUsageMB: 15
+  cpuUsagePercent: 0.05
+  diskSpaceMB: 2
+
+- id: openbox
+  name: Openbox
+  category: window-manager
+  description: "Halmozo ablakkezelo kiterjedt temazasi lehetosegekkel. Menu-vezérelt, pipe-menukkel."
+  website: http://openbox.org/
+  logo: /assets/images/openbox-logo.jpg
+  screenshot: /assets/images/openbox-screenshot.jpg
+  tilingType: stacking
+  displayServer: x11
+  features:
+    - Stacking WM
+    - Box Themes
+    - Pipe Menus
+    - Lightweight
+  resourceUsage: lightweight
+  customization: high
+  beginnerFriendly: false
+  memoryUsageMB: 20
+  cpuUsagePercent: 0.1
+  diskSpaceMB: 4
+
+- id: qtile
+  name: Qtile
+  category: window-manager
+  description: "Teljes egeszeben Pythonban irt csempezo ablakkezelo. Könnyen bövítheto es konfigurálható Python koddal."
+  website: https://qtile.org/
+  logo: /assets/images/qtile-logo.jpg
+  screenshot: /assets/images/qtile-screenshot.jpg
+  tilingType: dynamic
+  displayServer: both
+  features:
+    - Python Config
+    - Built-in Widgets
+    - X11 & Wayland
+    - Extensible API
+  resourceUsage: lightweight
+  customization: high
+  beginnerFriendly: false
+  memoryUsageMB: 55
+  cpuUsagePercent: 0.3
+  diskSpaceMB: 18
+
+- id: wayfire
+  name: Wayfire
+  category: window-manager
+  description: "3D Wayland kompozitor a Compiz ihletesere. Latványos effektek, mint a kocka munkaterület-valto."
+  website: https://wayfire.org/
+  logo: /assets/images/wayfire-logo.jpg
+  screenshot: /assets/images/wayfire-screenshot.jpg
+  tilingType: stacking
+  displayServer: wayland
+  features:
+    - 3D Effects
+    - Cube Workspace
+    - Plugin System
+    - Animations
+  resourceUsage: moderate
+  customization: high
+  beginnerFriendly: false
+  memoryUsageMB: 95
+  cpuUsagePercent: 0.8
+  diskSpaceMB: 35
+
+- id: river
+  name: River
+  category: window-manager
+  description: "Dinamikus csempezo Wayland kompozitor, amely a dwm-hez hasonlo tag-rendszert hasznal."
+  website: https://github.com/riverwm/river
+  logo: /assets/images/river-logo.jpg
+  screenshot: /assets/images/river-screenshot.jpg
+  tilingType: dynamic
+  displayServer: wayland
+  features:
+    - Tag System
+    - External Layouts
+    - wlroots Based
+    - Minimal Design
+  resourceUsage: lightweight
+  customization: high
+  beginnerFriendly: false
+  memoryUsageMB: 35
+  cpuUsagePercent: 0.15
+  diskSpaceMB: 8
+
+- id: leftwm
+  name: LeftWM
+  category: window-manager
+  description: "Rust nyelven irt csempezo ablakkezelo, amely a stabilitasra es teljesitmenyre fokuszal."
+  website: https://leftwm.org/
+  logo: /assets/images/leftwm-logo.jpg
+  screenshot: /assets/images/leftwm-screenshot.jpg
+  tilingType: tiling
+  displayServer: x11
+  features:
+    - Rust Language
+    - TOML Config
+    - Theme System
+    - Fast & Stable
+  resourceUsage: lightweight
+  customization: high
+  beginnerFriendly: false
+  memoryUsageMB: 28
+  cpuUsagePercent: 0.1
+  diskSpaceMB: 10

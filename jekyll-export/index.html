@@ -1,0 +1,282 @@
+---
+layout: default
+title: Pure de Arch | DE & WM Kereso
+---
+
+<!-- Hero Section -->
+<section class="hero">
+  <span class="hero-badge">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="12" cy="12" r="10"></circle>
+      <line x1="12" y1="16" x2="12" y2="12"></line>
+      <line x1="12" y1="8" x2="12.01" y2="8"></line>
+    </svg>
+    Arch Linux alaprendszeren merve
+  </span>
+  <h2>Talalj magadnak tokeletesen megfelelo asztali kornyezetet</h2>
+  <p>Szurd es hasonlitsd ossze a nepszeru Desktop Environmenteket es Window Managereket tulajdonsagaik alapjan</p>
+</section>
+
+<!-- Search Section -->
+<section class="search-section">
+  <div class="search-wrapper">
+    <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="11" cy="11" r="8"></circle>
+      <path d="m21 21-4.35-4.35"></path>
+    </svg>
+    <input type="text" id="search-input" class="search-input" placeholder="Kereses nev, funkcio vagy leiras alapjan...">
+  </div>
+</section>
+
+<!-- Main Content -->
+<div class="container">
+  <div class="main-layout">
+    <!-- Sidebar Filters -->
+    <aside class="sidebar">
+      <div class="sidebar-sticky">
+        <h2 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 1.5rem;">Szurok</h2>
+        
+        <!-- Category Filter -->
+        <div class="filter-section">
+          <div class="filter-title">Tipus</div>
+          <div class="filter-chips">
+            <button class="filter-chip active" data-filter-type="category" data-filter-value="all">Osszes</button>
+            <button class="filter-chip" data-filter-type="category" data-filter-value="desktop-environment">Desktop Environment</button>
+            <button class="filter-chip" data-filter-type="category" data-filter-value="window-manager">Window Manager</button>
+          </div>
+        </div>
+        
+        <div class="filter-separator"></div>
+        
+        <!-- Display Server Filter -->
+        <div class="filter-section">
+          <div class="filter-title">Display Server</div>
+          <div class="filter-chips">
+            <button class="filter-chip active" data-filter-type="displayServer" data-filter-value="all">Osszes</button>
+            <button class="filter-chip" data-filter-type="displayServer" data-filter-value="x11">X11</button>
+            <button class="filter-chip" data-filter-type="displayServer" data-filter-value="wayland">Wayland</button>
+            <button class="filter-chip" data-filter-type="displayServer" data-filter-value="both">Mindketto</button>
+          </div>
+        </div>
+        
+        <div class="filter-separator"></div>
+        
+        <!-- Tiling Type Filter -->
+        <div class="filter-section">
+          <div class="filter-title">Ablakkezeles</div>
+          <div class="filter-chips">
+            <button class="filter-chip active" data-filter-type="tilingType" data-filter-value="all">Osszes</button>
+            <button class="filter-chip" data-filter-type="tilingType" data-filter-value="stacking">Stacking</button>
+            <button class="filter-chip" data-filter-type="tilingType" data-filter-value="tiling">Tiling</button>
+            <button class="filter-chip" data-filter-type="tilingType" data-filter-value="dynamic">Dynamic</button>
+            <button class="filter-chip" data-filter-type="tilingType" data-filter-value="manual">Manual</button>
+          </div>
+        </div>
+        
+        <div class="filter-separator"></div>
+        
+        <!-- Resource Usage Filter -->
+        <div class="filter-section">
+          <div class="filter-title">Eroforras-igeny</div>
+          <div class="filter-chips">
+            <button class="filter-chip active" data-filter-type="resourceUsage" data-filter-value="all">Osszes</button>
+            <button class="filter-chip" data-filter-type="resourceUsage" data-filter-value="lightweight">Konnyu</button>
+            <button class="filter-chip" data-filter-type="resourceUsage" data-filter-value="moderate">Kozepes</button>
+            <button class="filter-chip" data-filter-type="resourceUsage" data-filter-value="heavy">Nehez</button>
+          </div>
+        </div>
+        
+        <div class="filter-separator"></div>
+        
+        <!-- Customization Filter -->
+        <div class="filter-section">
+          <div class="filter-title">Testreszabhatosag</div>
+          <div class="filter-chips">
+            <button class="filter-chip active" data-filter-type="customization" data-filter-value="all">Osszes</button>
+            <button class="filter-chip" data-filter-type="customization" data-filter-value="low">Alacsony</button>
+            <button class="filter-chip" data-filter-type="customization" data-filter-value="medium">Kozepes</button>
+            <button class="filter-chip" data-filter-type="customization" data-filter-value="high">Magas</button>
+          </div>
+        </div>
+        
+        <div class="filter-separator"></div>
+        
+        <!-- Beginner Friendly Filter -->
+        <div class="filter-section">
+          <div class="filter-title">Felhasznaloi szint</div>
+          <div class="filter-chips">
+            <button class="filter-chip active" data-filter-type="beginnerFriendly" data-filter-value="false">Mind</button>
+            <button class="filter-chip" data-filter-type="beginnerFriendly" data-filter-value="true">Csak kezdobarat</button>
+          </div>
+        </div>
+      </div>
+    </aside>
+    
+    <!-- Cards Grid -->
+    <section class="cards-section">
+      <div id="cards-container" class="cards-grid">
+        <!-- Cards will be rendered by JavaScript -->
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- Guide Section -->
+<section id="guide" class="guide-section">
+  <div class="container">
+    <h2 class="guide-title">Telepitesi Utmutato</h2>
+    
+    <div class="guide-card">
+      <h3>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+          <line x1="7" y1="2" x2="7" y2="22"></line>
+          <line x1="17" y1="2" x2="17" y2="22"></line>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <line x1="2" y1="7" x2="7" y2="7"></line>
+          <line x1="2" y1="17" x2="7" y2="17"></line>
+          <line x1="17" y1="17" x2="22" y2="17"></line>
+          <line x1="17" y1="7" x2="22" y2="7"></line>
+        </svg>
+        USB Telepito Letrehozasa (BalenaEtcher)
+      </h3>
+      
+      <div class="guide-step">
+        <span class="step-number">1</span>
+        <div class="step-content">
+          <h4>Toltsd le a BalenaEtcher-t</h4>
+          <p>Latogass el a <a href="https://etcher.balena.io/" target="_blank" rel="noopener">balena.io/etcher</a> oldalra es toltsd le a rendszerednek megfelelo verziot.</p>
+        </div>
+      </div>
+      
+      <div class="guide-step">
+        <span class="step-number">2</span>
+        <div class="step-content">
+          <h4>Valaszd ki az ISO fajlt</h4>
+          <p>Kattints a "Flash from file" gombra es valaszd ki a letoltott Pure de Arch ISO fajlt.</p>
+        </div>
+      </div>
+      
+      <div class="guide-step">
+        <span class="step-number">3</span>
+        <div class="step-content">
+          <h4>Valaszd ki az USB meghajtat</h4>
+          <p>Kattints a "Select target" gombra es valaszd ki az USB meghajtodat. Figyelj, hogy a megfelelo eszkoz legyen kivalasztva!</p>
+        </div>
+      </div>
+      
+      <div class="guide-step">
+        <span class="step-number">4</span>
+        <div class="step-content">
+          <h4>Indits el az irast</h4>
+          <p>Kattints a "Flash!" gombra es vard meg, amig az iras es ellenorzes befejezodik.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="guide-card">
+      <h3>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="4,17 10,11 4,5"></polyline>
+          <line x1="12" y1="19" x2="20" y2="19"></line>
+        </svg>
+        WM Alkalmazasok Telepitese
+      </h3>
+      
+      <p style="color: var(--muted-foreground); margin-bottom: 1rem;">A kovetkezo parancsokkal telepitheted a legnepszerubb alkalmazasokat Window Manager kornyezethez:</p>
+      
+      <div class="guide-step">
+        <span class="step-number">1</span>
+        <div class="step-content">
+          <h4>Alacritty (Terminal Emulator)</h4>
+          <p>Gyors, GPU-gyorsitott terminal emulator</p>
+          <div class="code-block">
+            <code>sudo pacman -S alacritty</code>
+          </div>
+        </div>
+      </div>
+      
+      <div class="guide-step">
+        <span class="step-number">2</span>
+        <div class="step-content">
+          <h4>Thunar (File Manager)</h4>
+          <p>Konnyen hasznalhato grafikus fajlkezelo</p>
+          <div class="code-block">
+            <code>sudo pacman -S thunar</code>
+          </div>
+        </div>
+      </div>
+      
+      <div class="guide-step">
+        <span class="step-number">3</span>
+        <div class="step-content">
+          <h4>mpv (Media Player)</h4>
+          <p>Konnyu es sokoldalú medialejatszo</p>
+          <div class="code-block">
+            <code>sudo pacman -S mpv</code>
+          </div>
+        </div>
+      </div>
+      
+      <div class="guide-step">
+        <span class="step-number">4</span>
+        <div class="step-content">
+          <h4>Firefox (Web Browser)</h4>
+          <p>Nepszeru, adat vedelemre fokuszalo bongeszo</p>
+          <div class="code-block">
+            <code>sudo pacman -S firefox</code>
+          </div>
+        </div>
+      </div>
+      
+      <div class="guide-step">
+        <div class="step-content">
+          <h4>Minden egyszerre</h4>
+          <p>Az osszes alkalmazas egyetlen paranccsal:</p>
+          <div class="code-block">
+            <code>sudo pacman -S alacritty thunar mpv firefox</code>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Screenshot Modal -->
+<div id="screenshot-modal" class="modal-overlay">
+  <button id="modal-close" class="modal-close">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <line x1="18" y1="6" x2="6" y2="18"></line>
+      <line x1="6" y1="6" x2="18" y2="18"></line>
+    </svg>
+  </button>
+  <div class="modal-content">
+    <img id="modal-image" src="" alt="Kepernyokep">
+  </div>
+</div>
+
+<!-- Environment Data -->
+<script>
+window.environmentsData = [
+{% for env in site.data.environments %}
+  {
+    id: "{{ env.id }}",
+    name: "{{ env.name }}",
+    category: "{{ env.category }}",
+    description: "{{ env.description | escape }}",
+    website: "{{ env.website }}",
+    logo: "{{ env.logo | relative_url }}",
+    screenshot: "{{ env.screenshot | relative_url }}",
+    tilingType: "{{ env.tilingType }}",
+    displayServer: "{{ env.displayServer }}",
+    features: [{% for feature in env.features %}"{{ feature }}"{% unless forloop.last %}, {% endunless %}{% endfor %}],
+    resourceUsage: "{{ env.resourceUsage }}",
+    customization: "{{ env.customization }}",
+    beginnerFriendly: {{ env.beginnerFriendly }},
+    memoryUsageMB: {{ env.memoryUsageMB }},
+    cpuUsagePercent: {{ env.cpuUsagePercent }},
+    diskSpaceMB: {{ env.diskSpaceMB }}
+  }{% unless forloop.last %},{% endunless %}
+{% endfor %}
+];
+</script>

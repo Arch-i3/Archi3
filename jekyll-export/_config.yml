@@ -1,0 +1,31 @@
+title: "Pure de Arch | DE & WM Kereso"
+description: "Talalj magadnak tokeletesen megfelelo Desktop Environmentet vagy Window Managert"
+baseurl: ""
+url: "https://pure-de-arch.github.io"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Sass settings
+sass:
+  style: compressed
+
+# Exclude files
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+
+# Collections
+collections:
+  environments:
+    output: false
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
